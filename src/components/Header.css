@@ -8,9 +8,29 @@
   width: calc(100% - 100px);
   height: var(--nav-height);
   padding: 0px 50px 0px 50px;
-  background-color: white;
+  z-index: 100;
+  /* background-color: white; */
 }
 
-.logo {
+.logocontainer {
   flex-grow: 1;
+}
+
+.logocontainer .logo {
+  color: var(--color-highlight);
+  font-weight: bold;
+  width: 2.75rem;
+  height: 2rem;
+  padding-top: 0.75rem;
+  border-color: var(--color-highlight);
+  border-radius: 50%;
+  border-width: 3px;
+  border-style: solid;
+  text-align: center;
+  text-justify: distribute;
+}
+
+.logocontainer .logo:hover {
+  background-color: var(--color-background-highlight);
+  transition: background-color 0.25s ease-in-out;
 }

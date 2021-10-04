@@ -1,4 +1,5 @@
 import react from 'react';
+import './Link.css';
 
 export interface ILink {
   link: string;
@@ -8,9 +9,10 @@ export interface ILink {
 
 const Link = ({ link, index, text }: ILink): JSX.Element => {
   return (
-    <div>
-      {link} {index} {text}
-    </div>
+    <a className='linkoverrides' href={link}>
+      <span className='index'>{index}</span>
+      <span className='text'>{text}</span>
+    </a>
   );
 };
 

@@ -1,5 +1,11 @@
 :root {
   --nav-height: 100px;
+  --color-background-highlight: #133040;
+  --color-background: #0b192e;
+  --color-primary: #ccd6f6;
+  --color-primary-darker: #8892b0;
+  --color-highlight: #64fcda;
+  --side-padding: 100px;
 }
 
 body {
@@ -9,5 +15,5 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0b192e;
+  background-color: var(--color-background);
 }

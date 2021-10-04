@@ -1,5 +1,6 @@
 import react from 'react';
 import Link, { ILink } from './Link';
+import Button from './Button';
 import './Header.css';
 
 const links: ILink[] = [
@@ -26,12 +27,24 @@ const links: ILink[] = [
 ];
 
 const Header = (): JSX.Element => {
+  const buttonClickHandler = () => {
+    console.log('Button clicked');
+  };
+
   return (
     <div className='header'>
-      <div className='logo'>MDL</div>
+      <div className='logocontainer'>
+        <div className='logo'>MDL</div>
+      </div>
       {links.map((link) => (
-        <Link link={link.link} index={link.index} text={link.text} />
+        <Link
+          key={link.index}
+          link={link.link}
+          index={link.index}
+          text={link.text}
+        />
       ))}
+      <Button text='Resume' onClick={buttonClickHandler} />
     </div>
   );
 };
