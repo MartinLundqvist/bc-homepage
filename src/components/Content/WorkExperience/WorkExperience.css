@@ -1,0 +1,73 @@
+.workexperiencecontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.worknavigatorcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+}
+
+.worknavigatorcontainer .worknavigatorhighlight {
+  position: relative;
+  /* top: -96px; */
+  /* bottom: 48px; */
+  height: var(--work-nav-height);
+  width: 3px;
+  background-color: var(--color-highlight);
+  transition: all 0.25s ease-in-out;
+}
+
+.worknavigatorcontainer button {
+  width: 8rem;
+  height: var(--work-nav-height);
+  text-align: start;
+  padding-left: 15px;
+  transition: all 0.5s;
+  cursor: pointer;
+  background-color: var(--color-background);
+  color: var(--color-primary-darker);
+  font-size: var(--font-size-small);
+  /* line-height: var(--work-nav-height); */
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+  border-left: 1px solid var(--color-primary-darker);
+  letter-spacing: 0.1rem;
+}
+
+.worknavigatorcontainer button.highlight {
+  color: var(--color-highlight);
+}
+
+.worknavigatorcontainer button:hover {
+  background-color: var(--color-background-highlight);
+  color: var(--color-highlight);
+}
+
+.workdetailcontainer {
+  padding-left: 50px;
+}
+
+.workdetailcontainer ul {
+  list-style: none;
+}
+
+.workdetailcontainer ul li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: var(--color-primary-darker);
+  font-size: var(--font-size-regular);
+  letter-spacing: 0.1rem;
+}
+
+.workdetailcontainer ul li::before {
+  position: absolute;
+  transform: translateX(-40px);
+  content: '>';
+  color: var(--color-highlight);
+}

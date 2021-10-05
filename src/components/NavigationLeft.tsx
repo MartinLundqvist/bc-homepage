@@ -43,8 +43,8 @@ const links: ILink[] = [
 const NavigationLeft = (): JSX.Element => {
   return (
     <div className='navigationleftcontainer'>
-      {links.map((link) => (
-        <a href={link.link} className='link'>
+      {links.map((link, index) => (
+        <a key={index} href={link.link} className='link'>
           {link.logo}
         </a>
       ))}

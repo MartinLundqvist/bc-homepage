@@ -5,10 +5,12 @@
   --color-primary: #ccd6f6;
   --color-primary-darker: #8892b0;
   --color-highlight: #64fcda;
-  --side-padding: 125px;
+  --side-padding: 200px;
   --font-size-small: 16px;
   --font-size-regular: 20px;
+  --font-size-regular-plus: 26px;
   --font-size-large: clamp(26px, 5vw, 32px);
+  --work-nav-height: 48px;
 }
 
 body {

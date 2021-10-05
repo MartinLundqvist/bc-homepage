@@ -9,8 +9,8 @@ export interface ISectionTitleProps {
 const SectionTitle = ({ index, title }: ISectionTitleProps): JSX.Element => {
   return (
     <div className='sectiontitlecontainer'>
-      <span className='index'>01.</span>
-      <span className='title'>About me</span>
+      <span className='index'>{index}</span>
+      <span className='title'>{title}</span>
       <div className='line'></div>
     </div>
   );

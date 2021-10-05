@@ -19,11 +19,32 @@
   min-height: 100vh;
 }
 
+.contentcontainer section.narrow {
+  padding: 0px 100px 0px 100px;
+}
+
 .contentcontainer h3 {
   font-style: inherit;
   font-weight: inherit;
   font-size: var(--font-size-regular);
   color: var(--color-highlight);
+}
+
+.contentcontainer h4 {
+  font-size: var(--font-size-regular-plus);
+  font-weight: bold;
+  color: var(--color-primary);
+  padding-right: 1rem;
+  margin: 0px;
+}
+
+.contentcontainer h5 {
+  font-weight: normal;
+  font-size: var(--font-size-regular);
+  color: var(--color-primary-darker);
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  margin: 0px;
 }
 
 .contentcontainer h1 {
