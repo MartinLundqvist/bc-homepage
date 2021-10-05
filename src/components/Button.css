@@ -10,5 +10,6 @@ button.button {
 
 button.button:hover {
   background-color: var(--color-background-highlight);
+  cursor: pointer;
   transition: background-color 0.25s ease-in;
 }

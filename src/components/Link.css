@@ -11,7 +11,7 @@ a .index {
 
 a .text {
   color: var(--color-primary);
-  transition: color 0.25s ease-in;
+  transition: color 0.2s ease-in;
   padding-right: 1.5rem;
 }
 

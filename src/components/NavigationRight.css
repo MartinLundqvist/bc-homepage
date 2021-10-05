@@ -1,4 +1,4 @@
-.navigationleftcontainer {
+.navigationrightcontainer {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -6,24 +6,26 @@
   align-items: center;
   height: 40%;
   bottom: 0px;
-  left: 0px;
+  right: 0px;
   width: var(--side-padding);
   z-index: 19;
 }
 
-.navigationleftcontainer .link {
-  width: 24px;
-  height: 24px;
+.navigationrightcontainer a {
+  flex-grow: 1;
+  writing-mode: vertical-rl;
+  font-size: inherit;
+  text-decoration: none;
   color: var(--color-primary);
   transition: all 0.1s ease-in-out;
 }
 
-.navigationleftcontainer .link:hover {
+.navigationrightcontainer a:hover {
   color: var(--color-highlight);
   transform: translateY(-5px);
 }
 
-.navigationleftcontainer .line {
+.navigationrightcontainer .line {
   height: 150px;
   width: 1px;
   background-color: var(--color-primary);

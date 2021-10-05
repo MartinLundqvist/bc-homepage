@@ -1,0 +1,4 @@
+.sectionaboutcontainer {
+  display: flex;
+  flex-direction: row;
+}

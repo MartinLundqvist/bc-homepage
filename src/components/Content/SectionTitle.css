@@ -1,0 +1,28 @@
+.sectiontitlecontainer {
+  display: flex;
+  flex-direction: row;
+  right: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  /* background-color: white; */
+}
+
+.sectiontitlecontainer .index {
+  font-size: var(--font-size-large);
+  color: var(--color-highlight);
+  padding-right: 1rem;
+}
+
+.sectiontitlecontainer .title {
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  color: var(--color-primary);
+  padding-right: 1rem;
+}
+
+.sectiontitlecontainer .line {
+  width: 200px;
+  height: 1px;
+  opacity: 0.75;
+  background-color: var(--color-primary-darker);
+}

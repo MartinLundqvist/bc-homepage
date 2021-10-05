@@ -5,7 +5,10 @@
   --color-primary: #ccd6f6;
   --color-primary-darker: #8892b0;
   --color-highlight: #64fcda;
-  --side-padding: 100px;
+  --side-padding: 125px;
+  --font-size-small: 16px;
+  --font-size-regular: 20px;
+  --font-size-large: clamp(26px, 5vw, 32px);
 }
 
 body {

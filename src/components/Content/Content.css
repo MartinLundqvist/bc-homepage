@@ -1,0 +1,75 @@
+.contentcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  top: 0px;
+  bottom: 0px;
+  min-height: 100vh;
+  padding-right: var(--side-padding);
+  padding-left: var(--side-padding);
+  z-index: 0;
+}
+
+.contentcontainer section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.contentcontainer h3 {
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: var(--font-size-regular);
+  color: var(--color-highlight);
+}
+
+.contentcontainer h1 {
+  margin: 0px;
+  font-size: clamp(40px, 8vw, 80px);
+  color: var(--color-primary);
+}
+
+.contentcontainer h1.darker {
+  color: var(--color-primary-darker);
+}
+
+.contentcontainer p {
+  width: 75%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-size: var(--font-size-regular);
+  color: var(--color-primary-darker);
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+}
+
+.contentcontainer p.wide {
+  width: 100%;
+  margin-right: 30px;
+}
+
+.contentcontainer p a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-highlight);
+}
+
+.contentcontainer p a::after {
+  content: '';
+  position: relative;
+  display: block;
+  bottom: 0.2rem;
+  right: 0px;
+  width: 0px;
+  height: 1px;
+  background-color: var(--color-highlight);
+  transition: width 0.25s ease-in-out;
+}
+
+.contentcontainer p a:hover::after {
+  width: 100%;
+}

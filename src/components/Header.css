@@ -9,7 +9,7 @@
   height: var(--nav-height);
   padding: 0px 50px 0px 50px;
   z-index: 100;
-  /* background-color: white; */
+  background-color: var(--color-background);
 }
 
 .logocontainer {
