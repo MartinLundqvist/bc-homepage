@@ -9,7 +9,7 @@ const App = (): JSX.Element => {
   const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setShowIntro(false), 2000);
+    setTimeout(() => setShowIntro(false), 2500);
   }, []);
 
   if (showIntro) return <Intro />;
