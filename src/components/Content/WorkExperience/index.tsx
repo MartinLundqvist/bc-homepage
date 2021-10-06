@@ -61,7 +61,7 @@ const WorkDetail = ({ workId }: IWorkDetailProps): JSX.Element => {
 
   return (
     <div className='workdetailcontainer'>
-      <h4>{work?.work}</h4>
+      <h4>{work?.worklong}</h4>
       <h5>
         {work?.from} - {work?.to}
       </h5>

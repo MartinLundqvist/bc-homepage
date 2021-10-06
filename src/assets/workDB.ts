@@ -1,6 +1,7 @@
 export interface IWork {
   id: number;
   work: string;
+  worklong: string;
   from: string;
   to: string;
   descriptions: string[];
@@ -9,17 +10,19 @@ export interface IWork {
 const works: IWork[] = [
   {
     id: 0,
-    work: 'Arundo Analytics',
+    work: 'Arundo',
+    worklong: 'Arundo Analytics',
     from: '2018',
     to: 'present',
     descriptions: [
-      "Currently CEO, leading Arundo's global operations including sales, delivery, products, engineering and data science.",
+      "Currently CEO at Arundo Analytics, leading Arundo's global operations including sales, delivery, products, engineering and data science.",
       'Formerly, globally responsible for developing and maintaining Arundo’s relationships with strategic industrial partners. ',
     ],
   },
   {
     id: 1,
-    work: 'McKinsey & Company',
+    work: 'McKinsey',
+    worklong: 'Mckinsey & Company',
     from: '2001',
     to: '2017',
     descriptions: [
@@ -32,6 +35,7 @@ const works: IWork[] = [
   {
     id: 2,
     work: 'AT Kearney',
+    worklong: 'AT Kearny',
     from: '2000',
     to: '2001',
     descriptions: [
@@ -41,6 +45,7 @@ const works: IWork[] = [
   {
     id: 3,
     work: 'UBS',
+    worklong: 'Union Bank of Switzerland',
     from: '1998',
     to: '1999',
     descriptions: [
@@ -51,6 +56,7 @@ const works: IWork[] = [
   {
     id: 4,
     work: 'ETH Zurich',
+    worklong: 'Swiss Federal Institute of Technology',
     from: '1997',
     to: '1998',
     descriptions: [
@@ -61,6 +67,7 @@ const works: IWork[] = [
   {
     id: 5,
     work: 'LiTH',
+    worklong: 'Linköping Institute of Technology',
     from: '1995',
     to: '2000',
     descriptions: [

@@ -1,8 +1,8 @@
 .contentcontainer {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start; */
   top: 0px;
   bottom: 0px;
   min-height: 100vh;
@@ -12,15 +12,24 @@
 }
 
 .contentcontainer section {
+  display: block;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  /* min-height: 75vh; */
+}
+
+.contentcontainer section.start {
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  min-height: 75vh;
+  min-height: 100vh;
 }
 
 .contentcontainer section.narrow {
-  padding: 0px 100px 0px 100px;
+  padding-right: 100px;
+  padding-left: 100px;
 }
 
 .contentcontainer h3 {
