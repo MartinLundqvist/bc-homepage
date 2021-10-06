@@ -6,7 +6,7 @@ import './SectionAbout.css';
 
 const SectionAbout = (): JSX.Element => {
   return (
-    <section>
+    <section id='about'>
       <SectionTitle index='01.' title='About me' />
       <div className='sectionaboutcontainer'>
         <p className='wide'>

@@ -16,7 +16,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 75vh;
 }
 
 .contentcontainer section.narrow {

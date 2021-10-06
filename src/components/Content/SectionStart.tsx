@@ -4,7 +4,7 @@ import './Content.css';
 
 const SectionStart = (): JSX.Element => {
   return (
-    <section>
+    <section id='home'>
       <h3>Hi, my name is</h3>
       <h1>Martin Lundqvist</h1>
       <h1 className='darker'>

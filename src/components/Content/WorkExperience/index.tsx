@@ -62,7 +62,9 @@ const WorkDetail = ({ workId }: IWorkDetailProps): JSX.Element => {
   return (
     <div className='workdetailcontainer'>
       <h4>{work?.work}</h4>
-      <h5>From - to date</h5>
+      <h5>
+        {work?.from} - {work?.to}
+      </h5>
       <ul>
         {work?.descriptions.map((desc, index) => (
           <li key={index}>{desc}</li>

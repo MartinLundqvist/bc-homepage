@@ -6,7 +6,7 @@ import WorkExperience from './WorkExperience';
 
 const SectionExperience = (): JSX.Element => {
   return (
-    <section className='narrow'>
+    <section id='experience' className='narrow'>
       <SectionTitle index='02.' title="What I've done professionally" />
       <WorkExperience />
     </section>

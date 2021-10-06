@@ -16,21 +16,22 @@
   flex-grow: 1;
 }
 
-.logocontainer .logo {
+.logocontainer a.logo {
+  text-decoration: none;
   color: var(--color-highlight);
   font-weight: bold;
-  width: 2.75rem;
-  height: 2rem;
-  padding-top: 0.75rem;
+  /* width: 2.75rem; */
+  /* height: 2rem; */
+  padding: 0.75rem;
   border-color: var(--color-highlight);
   border-radius: 50%;
   border-width: 3px;
   border-style: solid;
-  text-align: center;
-  text-justify: distribute;
+  /* text-align: center; */
+  /* text-justify: distribute; */
 }
 
-.logocontainer .logo:hover {
+.logocontainer a.logo:hover {
   background-color: var(--color-background-highlight);
   transition: background-color 0.25s ease-in-out;
 }

@@ -1,16 +1,16 @@
-import react from 'react';
-import Link, { ILink } from './Link';
+import React from 'react';
+import Link, { ILinkProps as ILink } from './Link';
 import Button from './Button';
 import './Header.css';
 
 const links: ILink[] = [
   {
-    link: '',
+    link: '#about',
     index: '01.',
     text: 'About',
   },
   {
-    link: '',
+    link: '#experience',
     index: '02.',
     text: 'Experience',
   },
@@ -34,7 +34,9 @@ const Header = (): JSX.Element => {
   return (
     <div className='header'>
       <div className='logocontainer'>
-        <div className='logo'>MDL</div>
+        <a href='#home' className='logo'>
+          ML
+        </a>
       </div>
       {links.map((link) => (
         <Link
