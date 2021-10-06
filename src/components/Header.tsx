@@ -1,6 +1,7 @@
 import React from 'react';
 import Link, { ILinkProps as ILink } from './Link';
 import Button from './Button';
+import Fade from 'react-reveal/Fade';
 import './Header.css';
 
 const links: ILink[] = [
@@ -33,20 +34,24 @@ const Header = (): JSX.Element => {
 
   return (
     <div className='header'>
-      <div className='logocontainer'>
-        <a href='#home' className='logo'>
-          ML
-        </a>
-      </div>
-      {links.map((link) => (
-        <Link
-          key={link.index}
-          link={link.link}
-          index={link.index}
-          text={link.text}
-        />
-      ))}
-      <Button text='Resume' onClick={buttonClickHandler} />
+      <Fade left>
+        <div className='logocontainer'>
+          <a href='#home' className='logo'>
+            ML
+          </a>
+        </div>
+      </Fade>
+      <Fade right>
+        {links.map((link) => (
+          <Link
+            key={link.index}
+            link={link.link}
+            index={link.index}
+            text={link.text}
+          />
+        ))}
+        <Button text='Resume' onClick={buttonClickHandler} />
+      </Fade>
     </div>
   );
 };

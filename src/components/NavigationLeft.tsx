@@ -1,5 +1,6 @@
 import React from 'react';
 import './NavigationLeft.css';
+import Fade from 'react-reveal/Fade';
 import GitLogo from '../logos/GitLogo';
 import CodePenLogo from '../logos/CodePenLogo';
 import InstaLogo from '../logos/InstaLogo';
@@ -42,14 +43,16 @@ const links: ILink[] = [
 
 const NavigationLeft = (): JSX.Element => {
   return (
-    <div className='navigationleftcontainer'>
-      {links.map((link, index) => (
-        <a key={index} href={link.link} className='link'>
-          {link.logo}
-        </a>
-      ))}
-      <div className='line' />
-    </div>
+    <Fade bottom>
+      <div className='navigationleftcontainer'>
+        {links.map((link, index) => (
+          <a key={index} href={link.link} className='link'>
+            {link.logo}
+          </a>
+        ))}
+        <div className='line' />
+      </div>
+    </Fade>
   );
 };
 
