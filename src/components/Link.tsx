@@ -5,11 +5,17 @@ export interface ILinkProps {
   link: string;
   index: string;
   text: string;
+  large?: boolean;
 }
 
-const Link = ({ link, index, text }: ILinkProps): JSX.Element => {
+const Link = ({
+  link,
+  index,
+  text,
+  large = false,
+}: ILinkProps): JSX.Element => {
   return (
-    <a className='linkoverrides' href={link}>
+    <a className={`linkoverrides ${large && 'large'}`} href={link}>
       <span className='index'>{index}</span>
       <span className='text'>{text}</span>
     </a>
