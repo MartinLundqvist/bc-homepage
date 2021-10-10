@@ -5,16 +5,23 @@
   --color-primary: #ccd6f6;
   --color-primary-darker: #8892b0;
   --color-highlight: #64fcda;
-  --side-padding: 200px;
+  --color-hamburger-background: #112240;
+  --side-padding: 150px;
   --font-size-small: 16px;
   --font-size-regular: 20px;
   --font-size-regular-plus: 26px;
   --font-size-large: clamp(26px, 5vw, 32px);
   --work-nav-height: 48px;
+  --work-nav-width: 120px;
+  --media-width-threshold: 1000px;
 }
 
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* overflow-x: hidden; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

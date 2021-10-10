@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 40%;
+  height: 45%;
   bottom: 0px;
   right: 0px;
   width: var(--side-padding);
@@ -26,6 +26,8 @@
 }
 
 .navigationrightcontainer .line {
+  /* flex-shrink: 1; */
+  /* padding-top: 50px; */
   height: 150px;
   width: 1px;
   background-color: var(--color-primary);

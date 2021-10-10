@@ -1,5 +1,6 @@
 a.linkoverrides {
   text-decoration: none;
+  font-size: var(--font-size-small);
 }
 
 a .index {
@@ -17,4 +18,8 @@ a .text {
 
 a .text:hover {
   color: var(--color-highlight);
+}
+
+a.linkoverrides.large {
+  font-size: var(--font-size-regular-plus);
 }

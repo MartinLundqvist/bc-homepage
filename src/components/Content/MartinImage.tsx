@@ -4,8 +4,10 @@ import './MartinImage.css';
 
 const MartinImage = (): JSX.Element => {
   return (
-    <div className='imagewrapper'>
-      <img src={image}></img>
+    <div className='wrapper'>
+      <div className='imagewrapper'>
+        <img src={image}></img>
+      </div>
     </div>
   );
 };

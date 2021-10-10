@@ -1,16 +1,64 @@
+@media only screen and (max-width: 1000px) {
+  .workexperiencecontainer {
+    flex-direction: column;
+  }
+
+  .worknavigatorcontainer {
+    flex-direction: row;
+    height: var(--work-nav-height);
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .worknavigatorcontainer button {
+    min-width: var(--work-nav-width);
+    border-left: 0px;
+    border-bottom: 1px solid var(--color-primary-darker);
+    text-align: center;
+  }
+
+  .workdetailcontainer {
+    padding: 25px 0px 0px 0px;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .workexperiencecontainer {
+    flex-direction: row;
+  }
+
+  .worknavigatorcontainer {
+    flex-direction: column;
+    width: 10rem;
+  }
+
+  .worknavigatorcontainer button {
+    width: 8rem;
+    border-bottom: 0px;
+    border-left: 1px solid var(--color-primary-darker);
+    text-align: start;
+    padding-left: 15px;
+  }
+
+  .workdetailcontainer {
+    padding: 10px 5px 10px 50px;
+    width: 100%;
+  }
+}
+
 .workexperiencecontainer {
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
   justify-content: space-evenly;
   margin-top: 30px;
+  width: 100%;
   height: auto;
+  overflow-x: hidden;
 }
 
 .worknavigatorcontainer {
   display: flex;
-  flex-direction: column;
-  width: 10rem;
 }
 
 .worknavigatorcontainer .worknavigatorhighlight {
@@ -23,11 +71,17 @@
   transition: all 0.25s ease-in-out;
 }
 
+.worknavigatorcontainer .worknavigatornarrowhighlight {
+  position: relative;
+  top: calc(100% - 3px);
+  height: 3px;
+  min-width: var(--work-nav-width);
+  background-color: var(--color-highlight);
+  transition: all 0.25s ease-in-out;
+}
+
 .worknavigatorcontainer button {
-  width: 8rem;
   height: var(--work-nav-height);
-  text-align: start;
-  padding-left: 15px;
   transition: all 0.5s;
   cursor: pointer;
   background-color: var(--color-background);
@@ -36,8 +90,7 @@
   /* line-height: var(--work-nav-height); */
   border-top: 0px;
   border-right: 0px;
-  border-bottom: 0px;
-  border-left: 1px solid var(--color-primary-darker);
+
   letter-spacing: 0.1rem;
 }
 
@@ -51,12 +104,12 @@
 }
 
 .workdetailcontainer {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-self: flex-start; */
-  padding: 10px 5px 10px 50px;
-  width: 100%;
+  justify-self: flex-start;
+  /* padding: 10px 5px 10px 50px;
+  width: 100%; */
 }
 
 .workdetailcontainer ul {

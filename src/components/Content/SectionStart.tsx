@@ -7,14 +7,13 @@ const SectionStart = (): JSX.Element => {
     <section id='home' className='start'>
       <h3>Hi, my name is</h3>
       <h1>Martin Lundqvist</h1>
-      <h1 className='darker'>
-        I built this site based on Brittany Chiang's design.
-      </h1>
+      <h1 className='darker'>Amateur web developer</h1>
       <p>
         I am a hobby / amateur software developer trying to get better at web
         development. Reproducing awesome hompages built by the best developers
         out there is a great way to learn! Check out{' '}
-        <a href=''> Brittany's site</a>!
+        <a href='https://brittanychiang.com/'> Brittany's site</a> which I stole
+        this design from!
       </p>
       <Button text='Click here to learn more' />
     </section>

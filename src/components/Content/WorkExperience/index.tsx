@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import './WorkExperience.css';
 import works, { IWork } from '../../../assets/workDB';
 
 const WorkExperience = (): JSX.Element => {
   const [workId, setWorkId] = useState(0);
 
+  const isDesktop = useMediaQuery({ query: '(min-width: 1000px)' });
+
   return (
     <div className='workexperiencecontainer'>
-      <WorkNavigator workId={workId} setWorkId={setWorkId} />
+      {isDesktop ? (
+        <WorkNavigator workId={workId} setWorkId={setWorkId} />
+      ) : (
+        <WorkNavigatorNarrow workId={workId} setWorkId={setWorkId} />
+      )}
       <WorkDetail workId={workId} />
     </div>
   );
@@ -43,6 +50,37 @@ const WorkNavigator = ({
       <div
         className='worknavigatorhighlight'
         style={{ bottom: `${bottomPosition}px` }}
+      ></div>
+    </div>
+  );
+};
+
+const WorkNavigatorNarrow = ({
+  workId,
+  setWorkId,
+}: IWorkNavigatorProps): JSX.Element => {
+  const [rightPosition, setRightPosition] = useState(0);
+
+  useEffect(() => {
+    const position = 120 * (works.length - workId);
+    setRightPosition(position);
+    console.log(`left position is set at ${position}`);
+  }, [workId]);
+
+  return (
+    <div className='worknavigatorcontainer'>
+      {works.map((work) => (
+        <button
+          className={workId == work.id ? 'highlight' : ''}
+          key={work.id}
+          onClick={() => setWorkId(work.id)}
+        >
+          {work.work}
+        </button>
+      ))}
+      <div
+        className='worknavigatornarrowhighlight'
+        style={{ right: `${rightPosition}px` }}
       ></div>
     </div>
   );

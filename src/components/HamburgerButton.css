@@ -1,0 +1,46 @@
+.hamburgerbutton {
+  display: block;
+  width: 50px;
+  height: 40px;
+  color: var(--color-highlight);
+  cursor: pointer;
+}
+
+.hamburgerbutton .line {
+  position: absolute;
+  background-color: var(--color-highlight);
+  height: 2px;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+#lineone {
+  top: 0px;
+  /* transform: rotate(45deg); */
+}
+
+#lineone.open {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+#linetwo {
+  top: 19px;
+  /* transform: rotate(-45deg); */
+}
+
+#linetwo.open {
+  transform: translateX(-100%);
+  opacity: 0;
+  /* transform: rotate(-45deg); */
+}
+
+#linethree {
+  bottom: 0px;
+  /* transform: rotate(45deg); */
+}
+
+#linethree.open {
+  top: 50%;
+  transform: rotate(-45deg);
+}
