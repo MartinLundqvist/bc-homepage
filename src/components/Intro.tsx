@@ -1,14 +1,57 @@
 import React from 'react';
-import './Intro.css';
+import styled, { keyframes } from 'styled-components';
+
+const animateAll = keyframes`
+  0% {
+    transform: scale(1, 1);
+  }
+  60% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(0, 0);
+}`;
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  animation: ${animateAll} 1s ease-in-out 1.5s forwards;
+`;
+
+const Text = styled.div`
+  position: absolute;
+  color: var(--color-highlight);
+  font-weight: bold;
+  font-size: var(--font-size-large);
+`;
+
+const animateCircle = keyframes`
+  from {
+    stroke-dashoffset: 628;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+`;
+
+const Circle = styled.circle`
+  fill: none;
+  stroke-width: 5px;
+  stroke: var(--color-highlight);
+  stroke-dasharray: 628;
+  animation: ${animateCircle} 3s ease-in-out;
+`;
 
 const Intro = (): JSX.Element => {
   return (
-    <div className='introcontainer'>
+    <Wrapper>
       <svg height='200px' width='200px'>
-        <circle cx='100' cy='100' r='50' className='circleprogress' />
+        <Circle cx='100' cy='100' r='50' />
       </svg>
-      <div className='introtext'>ML</div>
-    </div>
+      <Text>ML</Text>
+    </Wrapper>
   );
 };
 

@@ -1,31 +1,24 @@
 import React from 'react';
-import Link, { ILinkProps as ILink } from './Link';
+import Link from './Link';
 import Button from './Button';
+import LogoLink from './LogoLink';
 import Fade from 'react-reveal/Fade';
-import './Header.css';
+import styled from 'styled-components';
+import links from '../assets/links';
 
-const links: ILink[] = [
-  {
-    link: '#about',
-    index: '01.',
-    text: 'About',
-  },
-  {
-    link: '#experience',
-    index: '02.',
-    text: 'Experience',
-  },
-  {
-    link: '',
-    index: '03.',
-    text: 'Work',
-  },
-  {
-    link: '',
-    index: '04.',
-    text: 'Contact',
-  },
-];
+const Wrapper = styled.div`
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+  width: calc(100% - 100px);
+  height: var(--nav-height);
+  padding: 0px 50px 0px 50px;
+  z-index: 100;
+  background-color: var(--color-background);
+`;
 
 const Header = (): JSX.Element => {
   const buttonClickHandler = () => {
@@ -33,12 +26,12 @@ const Header = (): JSX.Element => {
   };
 
   return (
-    <div className='header'>
+    <Wrapper>
       <Fade left>
-        <div className='logocontainer'>
-          <a href='#home' className='logo'>
+        <div style={{ flexGrow: 1 }}>
+          <LogoLink href='/' className='logo'>
             ML
-          </a>
+          </LogoLink>
         </div>
       </Fade>
       <Fade right>
@@ -52,7 +45,7 @@ const Header = (): JSX.Element => {
         ))}
         <Button text='Resume' onClick={buttonClickHandler} />
       </Fade>
-    </div>
+    </Wrapper>
   );
 };
 

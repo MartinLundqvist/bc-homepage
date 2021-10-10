@@ -1,11 +1,42 @@
 import React from 'react';
-import './NavigationLeft.css';
+import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import GitLogo from '../logos/GitLogo';
 import CodePenLogo from '../logos/CodePenLogo';
 import InstaLogo from '../logos/InstaLogo';
 import LinkedInLogo from '../logos/LinkedInLogo';
 import TwitterLogo from '../logos/TwitterLogo';
+
+const Wrapper = styled.div`
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 45%;
+  bottom: 0px;
+  left: 0px;
+  width: var(--side-padding);
+  z-index: 19;
+`;
+
+const Link = styled.a`
+  width: 24px;
+  height: 24px;
+  color: var(--color-primary);
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    color: var(--color-highlight);
+    transform: translateY(-5px);
+  }
+`;
+
+const Line = styled.div`
+  height: 150px;
+  width: 1px;
+  background-color: var(--color-primary);
+`;
 
 interface ILink {
   text: string;
@@ -44,14 +75,14 @@ const links: ILink[] = [
 const NavigationLeft = (): JSX.Element => {
   return (
     <Fade bottom>
-      <div className='navigationleftcontainer'>
+      <Wrapper>
         {links.map((link, index) => (
-          <a key={index} href={link.link} className='link'>
+          <Link key={index} href={link.link}>
             {link.logo}
-          </a>
+          </Link>
         ))}
-        <div className='line' />
-      </div>
+        <Line />
+      </Wrapper>
     </Fade>
   );
 };
