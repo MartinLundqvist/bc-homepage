@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Intro from './components/Intro';
-import Header from './components/Header';
-import NavigationLeft from './components/NavigationLeft';
-import NavigationRight from './components/NavigationRight';
-import Content from './components/Content/Content';
-
+import Header from './components/navigation/Header';
+import NavigationLeft from './components/navigation/NavigationLeft';
+import NavigationRight from './components/navigation/NavigationRight';
+import Content from './components/sections';
 import { useMediaQuery } from 'react-responsive';
-import HeaderNarrow from './components/HeaderNarrow';
+import HeaderNarrow from './components/navigation/HeaderNarrow';
 
 const App = (): JSX.Element => {
   const [showIntro, setShowIntro] = useState(true);

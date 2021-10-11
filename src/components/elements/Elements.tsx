@@ -5,6 +5,11 @@ export const Section = styled.section`
   display: block;
   padding-top: 100px;
   padding-bottom: 100px;
+
+  &.narrow {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
 `;
 
 export const H1 = styled.h1`
@@ -65,16 +70,17 @@ export const P = styled.p`
       content: '';
       position: relative;
       display: block;
-      bottom: 0.2rem;
+      bottom: 0.4rem;
       right: 0px;
       width: 0px;
       height: 1px;
+      opacity: 0.5;
       background-color: var(--color-highlight);
-      transition: width 0.25s ease-in-out;
+      transition: width 0.2s ease-in-out;
+    }
 
-      &:hover {
-        width: 100%;
-      }
+    &:hover::after {
+      width: 100%;
     }
   }
 `;

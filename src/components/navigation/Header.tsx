@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from './Link';
-import Button from './Button';
+import Button from '../elements/Button';
 import LogoLink from './LogoLink';
 import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
-import links from '../assets/links';
+import links from '../../assets/links';
 
 const Wrapper = styled.div`
   position: fixed;

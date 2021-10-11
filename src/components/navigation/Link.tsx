@@ -1,5 +1,5 @@
 import react from 'react';
-import { ILink } from '../assets/links';
+import { ILink } from '../../assets/links';
 import styled from 'styled-components';
 
 const StyledLink = styled.a`

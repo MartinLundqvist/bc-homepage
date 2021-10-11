@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from '../Button';
-import { Section, H1, H3, P } from './Elements';
-import './Content.css';
+import Button from '../elements/Button';
+import { Section, H1, H3, P } from '../elements/Elements';
 
 const StyledSection = styled(Section)`
   padding: 0;

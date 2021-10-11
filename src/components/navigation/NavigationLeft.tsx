@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
-import GitLogo from '../logos/GitLogo';
-import CodePenLogo from '../logos/CodePenLogo';
-import InstaLogo from '../logos/InstaLogo';
-import LinkedInLogo from '../logos/LinkedInLogo';
-import TwitterLogo from '../logos/TwitterLogo';
+import GitLogo from '../elements/GitLogo';
+import CodePenLogo from '../elements/CodePenLogo';
+import InstaLogo from '../elements/InstaLogo';
+import LinkedInLogo from '../elements/LinkedInLogo';
+import TwitterLogo from '../elements/TwitterLogo';
 
 const Wrapper = styled.div`
   position: fixed;

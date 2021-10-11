@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Link from './Link';
-import Button from './Button';
+import Button from '../elements/Button';
 import styled from 'styled-components';
-import links from '../assets/links';
+import links from '../../assets/links';
 
 const Wrapper = styled.div`
   position: absolute;
