@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Fade from 'react-reveal/Fade';
+// import Fade from 'react-reveal/Fade';
+import FadeIn from '../utils/FadeIn';
 import GitLogo from '../elements/GitLogo';
 import CodePenLogo from '../elements/CodePenLogo';
 import InstaLogo from '../elements/InstaLogo';
@@ -21,6 +22,7 @@ const Wrapper = styled.div`
 `;
 
 const Link = styled.a`
+  display: block;
   width: 24px;
   height: 24px;
   color: var(--color-primary);
@@ -74,16 +76,16 @@ const links: ILink[] = [
 
 const NavigationLeft = (): JSX.Element => {
   return (
-    <Fade bottom>
-      <Wrapper>
+    <Wrapper>
+      <FadeIn cascade direction='up'>
         {links.map((link, index) => (
           <Link key={index} href={link.link}>
             {link.logo}
           </Link>
         ))}
         <Line />
-      </Wrapper>
-    </Fade>
+      </FadeIn>
+    </Wrapper>
   );
 };
 

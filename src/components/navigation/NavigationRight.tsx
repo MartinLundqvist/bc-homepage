@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Fade from 'react-reveal/Fade';
+import FadeIn from '../utils/FadeIn';
+// import Fade from 'react-reveal/Fade';
 
 const Wrapper = styled.div`
   position: fixed;
@@ -36,12 +37,12 @@ const Line = styled.div`
 
 const NavigationRight = (): JSX.Element => {
   return (
-    <Fade bottom>
-      <Wrapper>
+    <Wrapper>
+      <FadeIn cascade direction='up'>
         <Link href=''>iphonelynden@gmail.com</Link>
         <Line />
-      </Wrapper>
-    </Fade>
+      </FadeIn>
+    </Wrapper>
   );
 };
 

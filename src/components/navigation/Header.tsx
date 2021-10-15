@@ -2,13 +2,14 @@ import React from 'react';
 import Link from './Link';
 import Button from '../elements/Button';
 import LogoLink from './LogoLink';
-import Fade from 'react-reveal/Fade';
+import FadeIn from '../utils/FadeIn';
 import styled from 'styled-components';
 import links from '../../assets/links';
 
 const Wrapper = styled.div`
   position: fixed;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   top: 0px;
@@ -27,14 +28,14 @@ const Header = (): JSX.Element => {
 
   return (
     <Wrapper>
-      <Fade left>
-        <div style={{ flexGrow: 1 }}>
+      <div style={{ flexGrow: 1 }}>
+        <FadeIn direction='left'>
           <LogoLink href='/' className='logo'>
             ML
           </LogoLink>
-        </div>
-      </Fade>
-      <Fade right>
+        </FadeIn>
+      </div>
+      <FadeIn cascade direction='right'>
         {links.map((link) => (
           <Link
             key={link.index}
@@ -44,7 +45,7 @@ const Header = (): JSX.Element => {
           />
         ))}
         <Button text='Resume' onClick={buttonClickHandler} />
-      </Fade>
+      </FadeIn>
     </Wrapper>
   );
 };

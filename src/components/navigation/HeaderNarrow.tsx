@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LogoLink from './LogoLink';
-import Fade from 'react-reveal/Fade';
+// import Fade from 'react-reveal/Fade';
+import FadeIn from '../utils/FadeIn';
 import HamburgerButton from './HamburgerButton';
 import HamburgerMenu from './HamburgerMenu';
 import styled from 'styled-components';
@@ -32,19 +33,19 @@ const HeaderNarrow = (): JSX.Element => {
 
   return (
     <Wrapper>
-      <Fade left>
+      <FadeIn direction='left'>
         <div style={{ flexGrow: 1 }}>
           <LogoLink href='#home' className='logo'>
             ML
           </LogoLink>
         </div>
-      </Fade>
+      </FadeIn>
       <HamburgerMenu open={openMenu} setOpen={setOpenMenu} />
-      <Fade right>
+      <FadeIn direction='right'>
         <HamburgerWrapper onClick={() => setOpenMenu(!openMenu)}>
           <HamburgerButton open={openMenu} />
         </HamburgerWrapper>
-      </Fade>
+      </FadeIn>
     </Wrapper>
   );
 };

@@ -34,7 +34,6 @@ const WorkNavigatorNarrow = ({
   useEffect(() => {
     const position = 120 * (works.length - workId);
     setRightPosition(position);
-    console.log(`left position is set at ${position}`);
   }, [workId]);
 
   return (

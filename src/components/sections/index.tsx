@@ -1,7 +1,8 @@
 import React from 'react';
 // import './Content.css';
 import styled from 'styled-components';
-import Fade from 'react-reveal/Fade';
+// import Fade from 'react-reveal/Fade';
+import FadeIn from '../utils/FadeIn';
 import SectionStart from './SectionStart';
 import SectionAbout from './SectionAbout';
 import SectionExperience from './SectionExperience';
@@ -23,11 +24,11 @@ const Wrapper = styled.div`
 const Content = (): JSX.Element => {
   return (
     <Wrapper>
-      <Fade bottom>
+      <FadeIn cascade direction='up'>
         <SectionStart />
         <SectionAbout />
         <SectionExperience />
-      </Fade>
+      </FadeIn>
     </Wrapper>
   );
 };
