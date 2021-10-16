@@ -57,10 +57,15 @@ const HeaderNarrow = (): JSX.Element => {
 
   const handleScroll = (ev: Event) => {
     const currentScrollPos = window.scrollY;
-    const scrollUp = currentScrollPos > prevScrollPos.current ? true : false;
+
+    if (currentScrollPos < 5) {
+      setHide(false);
+    } else {
+      const scrollUp = currentScrollPos < prevScrollPos.current ? false : true;
+      setHide(scrollUp);
+    }
     const hasScrolled = currentScrollPos > 5 ? true : false;
     setShadow(hasScrolled);
-    setHide(scrollUp);
     prevScrollPos.current = currentScrollPos;
   };
 
