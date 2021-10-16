@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import Fade from 'react-reveal/Fade';
 import FadeIn from '../utils/FadeIn';
 import GitLogo from '../elements/GitLogo';
 import CodePenLogo from '../elements/CodePenLogo';

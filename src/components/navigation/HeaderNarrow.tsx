@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import LogoLink from './LogoLink';
-// import Fade from 'react-reveal/Fade';
 import FadeIn from '../utils/FadeIn';
 import HamburgerButton from './HamburgerButton';
 import HamburgerMenu from './HamburgerMenu';

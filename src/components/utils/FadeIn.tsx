@@ -1,17 +1,20 @@
 import React, { useRef, useEffect, useState, Children } from 'react';
 import styled, { keyframes } from 'styled-components';
-// import { gsap } from 'gsap';
 
-interface IAnimationProps {
+interface IKeyframeProps {
   translateX: string;
   translateY: string;
   opacity: number;
 }
 
-const animatedKeyframes = (animationProps: IAnimationProps) => keyframes`
+const animatedKeyframes = ({
+  translateX,
+  translateY,
+  opacity,
+}: IKeyframeProps) => keyframes`
 from {
-  transform: translate(${animationProps.translateX}, ${animationProps.translateY});
-  opacity: ${animationProps.opacity};
+  transform: translate(${translateX}, ${translateY});
+  opacity: ${opacity};
 }
 to {
   transform: none;
@@ -19,28 +22,10 @@ to {
 }
 `;
 
-interface IAnimatedProps extends IAnimationProps {
+interface IAnimatedProps extends IKeyframeProps {
   duration: number;
   delay: number;
 }
-
-// Not entirely clear to me which is most performant, BUT the below doesn't really behave as I want
-// const AnimatedOLD = styled.div<IAnimatedProps>`
-//   visibility: hidden;
-//   transform: translate(
-//     ${(props) => props.translateX},
-//     ${(props) => props.translateY}
-//   );
-//   opacity: ${(props) => props.opacity};
-//   transition: all ${(props) => props.duration}s ease-in
-//     ${(props) => props.delay}s;
-
-//   &.animate {
-//     visibility: visible;
-//     transform: none;
-//     opacity: 1;
-//   }
-// `;
 
 const Animated = styled.div<IAnimatedProps>`
   opacity: 0;
@@ -63,6 +48,7 @@ export interface IFadeInProps {
   delay?: number;
   cascade?: boolean;
   opacity?: number;
+  distance?: string;
 }
 
 const FadeIn = ({
@@ -72,6 +58,7 @@ const FadeIn = ({
   duration = 1,
   cascade = false,
   opacity = 0,
+  distance = '200px',
   ...props
 }: IFadeInProps): JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);
@@ -97,7 +84,6 @@ const FadeIn = ({
   }
 
   let domRef = useRef<HTMLDivElement>(null);
-  const distance = '200px';
   var x = '0px';
   var y = '0px';
   switch (direction) {

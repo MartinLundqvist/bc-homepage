@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import FadeIn from '../utils/FadeIn';
-// import Fade from 'react-reveal/Fade';
 
 const Wrapper = styled.div`
   position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   height: 45%;
   bottom: 0px;
@@ -16,6 +15,8 @@ const Wrapper = styled.div`
 `;
 
 const Link = styled.a`
+  display: block;
+  padding: 10px 0px 10px 0px;
   flex-grow: 1;
   writing-mode: vertical-rl;
   font-size: inherit;

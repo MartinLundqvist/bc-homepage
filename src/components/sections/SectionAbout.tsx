@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import SectionTitle from './SectionTitle';
 import MartinImage from './MartinImage';
 import { Section, P } from '../elements/Elements';
-// import './Content.css';
-// import './SectionAbout.css';
 
 const Wrapper = styled.div`
   display: grid;

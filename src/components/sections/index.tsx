@@ -1,7 +1,5 @@
 import React from 'react';
-// import './Content.css';
 import styled from 'styled-components';
-// import Fade from 'react-reveal/Fade';
 import FadeIn from '../utils/FadeIn';
 import SectionStart from './SectionStart';
 import SectionAbout from './SectionAbout';
