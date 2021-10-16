@@ -15,7 +15,7 @@ const works: IWork[] = [
     from: '2018',
     to: 'present',
     descriptions: [
-      "Currently CEO at Arundo Analytics, leading Arundo's global operations including sales, delivery, products, engineering and data science.",
+      "Currently COO at Arundo Analytics, leading Arundo's global operations including sales, delivery, products, engineering and data science.",
       'Formerly, globally responsible for developing and maintaining Arundo’s relationships with strategic industrial partners. ',
     ],
   },
