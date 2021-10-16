@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import LogoLink from './LogoLink';
 import FadeIn from '../utils/FadeIn';
 import HamburgerButton from './HamburgerButton';
@@ -16,7 +16,16 @@ const Wrapper = styled.div`
   height: var(--nav-height);
   padding: 0px 25px 0px 25px;
   z-index: 100;
-  background-color: var(--color-background);
+  background-color: var(--color-background-85);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease-in-out;
+
+  &.hide {
+    transform: translateY(-100%);
+  }
+  &.shadow {
+    box-shadow: 0px 0px 10px 0px black;
+  }
 `;
 
 const HamburgerWrapper = styled.div`
@@ -29,9 +38,34 @@ const HamburgerWrapper = styled.div`
 
 const HeaderNarrow = (): JSX.Element => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [hide, setHide] = useState(false);
+  const [shadow, setShadow] = useState(false);
+  const prevScrollPos = useRef(0);
+
+  useEffect(() => {
+    window.addEventListener('scroll', (ev) => handleScroll(ev));
+    return () => window.removeEventListener('scroll', (ev) => handleScroll(ev));
+  }, []);
+
+  useEffect(() => {
+    if (openMenu) {
+      document.body.classList.add('menu');
+    } else {
+      document.body.classList.remove('menu');
+    }
+  }, [openMenu]);
+
+  const handleScroll = (ev: Event) => {
+    const currentScrollPos = window.scrollY;
+    const scrollUp = currentScrollPos > prevScrollPos.current ? true : false;
+    const hasScrolled = currentScrollPos > 5 ? true : false;
+    setShadow(hasScrolled);
+    setHide(scrollUp);
+    prevScrollPos.current = currentScrollPos;
+  };
 
   return (
-    <Wrapper>
+    <Wrapper className={`${hide ? 'hide ' : shadow ? 'shadow' : ''}`}>
       <FadeIn direction='left'>
         <div style={{ flexGrow: 1 }}>
           <LogoLink href='#home' className='logo'>

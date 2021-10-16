@@ -47,6 +47,7 @@ const HamburgerMenu = ({ open, setOpen }: IHamburgerMenuProps): JSX.Element => {
       <MenuWrapper>
         {links.map((link) => (
           <Link
+            onClick={() => setOpen(false)}
             large
             key={link.index}
             link={link.link}

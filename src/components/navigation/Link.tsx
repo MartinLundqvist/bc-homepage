@@ -30,6 +30,7 @@ const StyledLink = styled.a`
 
 interface ILinkProps extends ILink {
   large?: boolean;
+  onClick?: () => void;
 }
 
 const Link = ({
@@ -37,9 +38,10 @@ const Link = ({
   index,
   text,
   large = false,
+  onClick = undefined,
 }: ILinkProps): JSX.Element => {
   return (
-    <StyledLink className={large ? 'large' : ''} href={link}>
+    <StyledLink onClick={onClick} className={large ? 'large' : ''} href={link}>
       <span className='index'>{index}</span>
       <span className='text'>{text}</span>
     </StyledLink>

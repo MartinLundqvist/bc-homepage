@@ -2,6 +2,7 @@
   --nav-height: 100px;
   --color-background-highlight: #133040;
   --color-background: #0b192e;
+  --color-background-85: #0b192e85;
   --color-primary: #ccd6f6;
   --color-primary-darker: #8892b0;
   --color-highlight: #64fcda;
@@ -28,4 +29,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-background);
+}
+
+body.menu {
+  overflow-y: hidden;
+}
+
+body.menu #content > * {
+  filter: blur(10px);
 }

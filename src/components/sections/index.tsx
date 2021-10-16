@@ -19,9 +19,10 @@ const Wrapper = styled.div`
   }
 `;
 
+// The 'content' id is in order to target a blur effect in the mobile mode. See index.css file.
 const Content = (): JSX.Element => {
   return (
-    <Wrapper>
+    <Wrapper id='content'>
       <FadeIn cascade direction='up'>
         <SectionStart />
         <SectionAbout />
