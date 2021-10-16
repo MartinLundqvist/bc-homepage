@@ -47,11 +47,12 @@ export const H5 = styled.h5`
 `;
 
 export const P = styled.p`
-  width: 75%;
+  width: 100%;
   margin-top: 30px;
   margin-bottom: 30px;
   font-style: normal;
-  font-size: var(--font-size-regular);
+  font-size: clamp(16px, 18px, 20px);
+  /* font-size: var(--font-size-regular); */
   color: var(--color-primary-darker);
   line-height: 1.5;
   letter-spacing: 0.1rem;
