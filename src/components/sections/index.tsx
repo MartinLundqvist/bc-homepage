@@ -14,8 +14,8 @@ const Wrapper = styled.div`
   padding-left: var(--side-padding);
 
   @media (max-width: 1000px) {
-    padding-right: calc(var(--side-padding) / 2);
-    padding-left: calc(var(--side-padding) / 2);
+    padding-right: var(--side-padding-narrow);
+    padding-left: var(--side-padding-narrow);
   }
 `;
 

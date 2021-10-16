@@ -5,7 +5,7 @@ import image from '../../assets/Martin.jpg';
 const Wrapper = styled.div`
   display: block;
   position: relative;
-  max-width: 350px;
+  max-width: 250px;
 
   @media (max-width: 1000px) {
     align-self: center;

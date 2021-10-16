@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   height: var(--work-nav-height);
   width: 100%;
   overflow-x: auto;
+  z-index: +10;
 `;
 
 const Highlight = styled.div`
