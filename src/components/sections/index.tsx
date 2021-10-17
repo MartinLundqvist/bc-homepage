@@ -4,6 +4,7 @@ import FadeIn from '../utils/FadeIn';
 import SectionStart from './SectionStart';
 import SectionAbout from './SectionAbout';
 import SectionExperience from './SectionExperience';
+import SectionProjects from './SectionProjects';
 
 const Wrapper = styled.div`
   top: 0px;
@@ -23,10 +24,17 @@ const Wrapper = styled.div`
 const Content = (): JSX.Element => {
   return (
     <Wrapper id='content'>
-      <FadeIn cascade direction='up'>
+      <FadeIn direction='up' duration={0.5} distance='50px'>
         <SectionStart />
+      </FadeIn>
+      <FadeIn direction='up' duration={0.5} distance='50px'>
         <SectionAbout />
+      </FadeIn>
+      <FadeIn direction='up' duration={0.5} distance='50px'>
         <SectionExperience />
+      </FadeIn>
+      <FadeIn direction='up' duration={0.5} distance='50px'>
+        <SectionProjects />
       </FadeIn>
     </Wrapper>
   );

@@ -2,12 +2,13 @@
   --nav-height: 100px;
   --color-background-highlight: #133040;
   --color-background: #0b192e;
+  --color-background-lighter: #112240;
   --color-background-85: #0b192e85;
   --color-primary: #ccd6f6;
   --color-primary-darker: #8892b0;
   --color-highlight: #64fcda;
   --color-hamburger-background: #112240;
-  --side-padding: 150px;
+  --side-padding: 100px;
   --side-padding-narrow: 20px;
   --font-size-small: 16px;
   --font-size-regular: 20px;

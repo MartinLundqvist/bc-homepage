@@ -22,8 +22,8 @@ const Wrapper = styled.div`
 
 const Link = styled.a`
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   color: var(--color-primary);
   transition: all 0.1s ease-in-out;
 

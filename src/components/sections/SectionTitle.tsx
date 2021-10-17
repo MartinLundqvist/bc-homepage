@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// TODO: Move SectionTitle to Elements
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;

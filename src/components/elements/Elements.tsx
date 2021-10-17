@@ -22,6 +22,12 @@ export const H1 = styled.h1`
   }
 `;
 
+export const H2 = styled.h2`
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  color: var(--color-primary);
+`;
+
 export const H3 = styled.h3`
   font-style: inherit;
   font-weight: inherit;
@@ -54,8 +60,8 @@ export const P = styled.p`
   font-size: clamp(16px, 18px, 20px);
   /* font-size: var(--font-size-regular); */
   color: var(--color-primary-darker);
-  line-height: 1.5;
-  letter-spacing: 0.1rem;
+  line-height: 1.3;
+  letter-spacing: 0.05rem;
 
   &.wide {
     width: 100%;
@@ -71,7 +77,7 @@ export const P = styled.p`
       content: '';
       position: relative;
       display: block;
-      bottom: 0.4rem;
+      bottom: 0.2rem;
       right: 0px;
       width: 0px;
       height: 1px;
