@@ -27,14 +27,24 @@ const ProjectImage = styled.div`
     grid-column: 6 / 13;
 
     @media (max-width: 1000px) {
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-background-lighter);
+      box-shadow: 5px 5px 10px black;
+
       grid-column: 1 / 13;
-      opacity: 0.25;
+      opacity: 0.15;
     }
   }
 
   @media (max-width: 1000px) {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-background-lighter);
+    box-shadow: 5px 5px 10px black;
+
     grid-column: 1 / 13;
-    opacity: 0.25;
+    opacity: 0.15;
   }
 `;
 
@@ -51,12 +61,16 @@ const ProjectDetails = styled.div`
 
     @media (max-width: 1000px) {
       grid-column: 1 / 13;
+      box-sizing: border-box;
+      padding: 10px 10px 10px 10px;
     }
   }
 
   @media (max-width: 1000px) {
     grid-column: 1 / 13;
     text-align: left;
+    box-sizing: border-box;
+    padding: 10px 10px 10px 10px;
   }
 `;
 
@@ -71,6 +85,16 @@ const PStyled = styled(P)`
 
   &:hover {
     box-shadow: 5px 5px 30px black;
+
+    @media (max-width: 1000px) {
+      box-shadow: none;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    box-shadow: none;
+    padding: 0px;
+    background-color: transparent;
   }
 `;
 
@@ -89,7 +113,9 @@ const ProjectToolsList = styled.ul`
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  gap: 10px;
   flex-direction: row;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
   padding: 25px 0px 0px 0px;
@@ -104,8 +130,6 @@ const ProjectToolsList = styled.ul`
 `;
 
 const ProjectToolsListItem = styled.li`
-  padding-left: 10px;
-  padding-top: 10px;
   color: var(--color-primary);
 `;
 

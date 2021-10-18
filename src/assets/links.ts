@@ -17,9 +17,9 @@ const links: ILink[] = [
     text: 'Experience',
   },
   {
-    link: '',
+    link: '#projects',
     index: '03.',
-    text: 'Work',
+    text: 'Projects',
   },
   {
     link: '',

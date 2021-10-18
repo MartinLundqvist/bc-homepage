@@ -4,6 +4,7 @@ import Glosly from './Glosly.png';
 import Twolaymen from './Twolaymen.png';
 import BCHomepage from './BCHompage.png';
 import GitLogo from '../components/elements/GitLogo';
+import LinkLogo from '../components/elements/LinkLogo';
 
 export interface IProject {
   image: string;
@@ -34,6 +35,10 @@ const projects: IProject[] = [
         url: 'https://github.com/MartinLundqvist/bc-homepage',
         logo: <GitLogo />,
       },
+      {
+        url: 'https://martinlundqvist.se/',
+        logo: <LinkLogo />,
+      },
     ],
   },
   {
@@ -49,6 +54,10 @@ const projects: IProject[] = [
         url: 'https://github.com/MartinLundqvist/twolaymen',
         logo: <GitLogo />,
       },
+      {
+        url: 'http://www.twolaymenhugeissues.com/',
+        logo: <LinkLogo />,
+      },
     ],
   },
   {
@@ -63,6 +72,10 @@ const projects: IProject[] = [
       {
         url: 'https://github.com/MartinLundqvist/erikssons',
         logo: <GitLogo />,
+      },
+      {
+        url: 'https://erikssons.herokupapp.com',
+        logo: <LinkLogo />,
       },
     ],
   },
@@ -86,6 +99,10 @@ const projects: IProject[] = [
       {
         url: 'https://github.com/MartinLundqvist/vocably',
         logo: <GitLogo />,
+      },
+      {
+        url: 'https://glosly.eu',
+        logo: <LinkLogo />,
       },
     ],
   },
