@@ -3,25 +3,30 @@ import styled from 'styled-components';
 
 // TODO: Move SectionTitle to Elements
 
-const Wrapper = styled.div`
+interface IWrapper {
+  wrap: string;
+}
+
+const Wrapper = styled.div<IWrapper>`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${(props) => (props.wrap == 'wrap' ? 'column' : 'row')};
   right: 0px;
   align-items: center;
   justify-content: flex-start;
+  gap: 1rem;
 `;
 
 const Index = styled.div`
   font-size: var(--font-size-large);
   color: var(--color-highlight);
-  padding-right: 1rem;
+  /* padding-right: 1rem; */
 `;
 
 const Title = styled.div`
   font-size: var(--font-size-large);
   font-weight: bold;
   color: var(--color-primary);
-  padding-right: 1rem;
+  /* padding-right: 1rem; */
 `;
 
 const Line = styled.div`
@@ -34,14 +39,19 @@ const Line = styled.div`
 export interface ISectionTitleProps {
   index?: string;
   title?: string;
+  wrap?: boolean;
 }
 
-const SectionTitle = ({ index, title }: ISectionTitleProps): JSX.Element => {
+const SectionTitle = ({
+  index,
+  title,
+  wrap = false,
+}: ISectionTitleProps): JSX.Element => {
   return (
-    <Wrapper>
+    <Wrapper wrap={wrap ? 'wrap' : ''}>
       <Index>{index}</Index>
       <Title>{title}</Title>
-      <Line />
+      {!wrap && <Line />}
     </Wrapper>
   );
 };

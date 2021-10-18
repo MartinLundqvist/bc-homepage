@@ -22,7 +22,7 @@ const links: ILink[] = [
     text: 'Projects',
   },
   {
-    link: '',
+    link: '#contact',
     index: '04.',
     text: 'Contact',
   },
