@@ -24,7 +24,7 @@ const SectionContact = (): JSX.Element => {
           Reach out! I'm always available at{' '}
           <a href='mailto:iphonelynden@gmail.com'>iphonelynden@gmail.com</a> or
           my{' '}
-          <a href='www.linkedin.com/in/martin-lundqvist-5bb940'>
+          <a href='https://www.linkedin.com/in/martin-lundqvist-5bb940'>
             LinkedIn profile
           </a>
           !
