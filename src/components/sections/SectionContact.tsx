@@ -12,6 +12,7 @@ const Wrapper = styled.div`
 
 const P = styled(PT)`
   width: auto;
+  text-align: center;
 `;
 
 const SectionContact = (): JSX.Element => {

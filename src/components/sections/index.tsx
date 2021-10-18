@@ -6,6 +6,7 @@ import SectionAbout from './SectionAbout';
 import SectionExperience from './SectionExperience';
 import SectionProjects from './SectionProjects';
 import SectionContact from './SectionContact';
+import Footer from './Footer';
 
 const Wrapper = styled.div`
   top: 0px;
@@ -40,6 +41,7 @@ const Content = (): JSX.Element => {
       <FadeIn direction='up' duration={0.5} distance='50px'>
         <SectionContact />
       </FadeIn>
+      <Footer />
     </Wrapper>
   );
 };
