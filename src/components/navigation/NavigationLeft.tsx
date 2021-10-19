@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   height: 45%;
   bottom: 0px;
   left: 0px;
-  width: var(--side-padding);
+  width: ${(props) => props.theme.dimensions.sidePadding};
   z-index: 19;
 `;
 
@@ -24,11 +24,11 @@ const Link = styled.a`
   display: block;
   width: 20px;
   height: 20px;
-  color: var(--color-primary);
+  color: ${(props) => props.theme.colors.primary};
   transition: all 0.1s ease-in-out;
 
   &:hover {
-    color: var(--color-highlight);
+    color: ${(props) => props.theme.colors.highlight};
     transform: translateY(-5px);
   }
 `;
@@ -36,7 +36,7 @@ const Link = styled.a`
 const Line = styled.div`
   height: 150px;
   width: 1px;
-  background-color: var(--color-primary);
+  background-color: ${(props) => props.theme.colors.primary};
 `;
 
 interface ILink {

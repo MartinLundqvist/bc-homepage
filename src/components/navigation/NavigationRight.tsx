@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   height: 45%;
   bottom: 0px;
   right: 0px;
-  width: var(--side-padding);
+  width: ${(props) => props.theme.dimensions.sidePadding};
 `;
 
 const Link = styled.a`
@@ -21,11 +21,11 @@ const Link = styled.a`
   writing-mode: vertical-rl;
   font-size: inherit;
   text-decoration: none;
-  color: var(--color-primary);
+  color: ${(props) => props.theme.colors.primary};
   transition: all 0.1s ease-in-out;
 
   &:hover {
-    color: var(--color-highlight);
+    color: ${(props) => props.theme.colors.highlight};
     transform: translateY(-5px);
   }
 `;
@@ -33,14 +33,14 @@ const Link = styled.a`
 const Line = styled.div`
   height: 150px;
   width: 1px;
-  background-color: var(--color-primary);
+  background-color: ${(props) => props.theme.colors.primary};
 `;
 
 const NavigationRight = (): JSX.Element => {
   return (
     <Wrapper>
       <FadeIn cascade direction='up'>
-        <Link href=''>iphonelynden@gmail.com</Link>
+        <Link href='mailto:iphonelynden@gmail.com'>iphonelynden@gmail.com</Link>
         <Line />
       </FadeIn>
     </Wrapper>

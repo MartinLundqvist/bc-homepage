@@ -5,13 +5,13 @@ const Wrapper = styled.div`
   display: block;
   width: 50px;
   height: 40px;
-  color: var(--color-highlight);
+  color: ${(props) => props.theme.colors.highlight};
   cursor: pointer;
 `;
 
 const Line = styled.div`
   position: absolute;
-  background-color: var(--color-highlight);
+  background-color: ${(props) => props.theme.colors.highlight};
   height: 2px;
   width: 100%;
   transition: all 0.2s ease-in-out;

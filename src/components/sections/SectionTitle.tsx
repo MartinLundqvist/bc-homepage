@@ -17,15 +17,15 @@ const Wrapper = styled.div<IWrapper>`
 `;
 
 const Index = styled.div`
-  font-size: var(--font-size-large);
-  color: var(--color-highlight);
+  font-size: ${(props) => props.theme.fonts.xlarge};
+  color: ${(props) => props.theme.colors.highlight};
   /* padding-right: 1rem; */
 `;
 
 const Title = styled.div`
-  font-size: var(--font-size-large);
+  font-size: ${(props) => props.theme.fonts.xlarge};
   font-weight: bold;
-  color: var(--color-primary);
+  color: ${(props) => props.theme.colors.primary};
   /* padding-right: 1rem; */
 `;
 
@@ -33,7 +33,7 @@ const Line = styled.div`
   width: 200px;
   height: 1px;
   opacity: 0.75;
-  background-color: var(--color-primary-darker);
+  background-color: ${(props) => props.theme.colors.darker};
 `;
 
 export interface ISectionTitleProps {

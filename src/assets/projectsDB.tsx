@@ -85,7 +85,7 @@ const projects: IProject[] = [
     projectTitle: 'Project',
     projectSubTitle: 'Train vocables',
     projectDescription:
-      "My son is studying Spanish, and I thought I'd build a simple web application for managing and testing vocables. This was my first attempt at building a full stack web application.",
+      "My son is studying Spanish, and I thought I'd build a simple web application for managing and practicing vocables. This was my first attempt at building a full stack web application.",
     projectTools: [
       'Node',
       'React',

@@ -28,7 +28,7 @@ const ImageWrapper = styled.div`
     top: 0px;
     left: 0px;
     border-radius: 15px;
-    background: var(--color-highlight);
+    background: ${(props) => props.theme.colors.highlight};
   }
 
   &::after {
@@ -39,7 +39,7 @@ const ImageWrapper = styled.div`
     left: 15px;
     width: 100%;
     height: 100%;
-    border: 3px solid var(--color-highlight);
+    border: 3px solid ${(props) => props.theme.colors.highlight};
     border-radius: 15px;
     z-index: -1;
     transition: transform 0.2s ease-in-out;

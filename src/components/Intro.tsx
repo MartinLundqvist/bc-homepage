@@ -22,9 +22,9 @@ const Wrapper = styled.div`
 
 const Text = styled.div`
   position: absolute;
-  color: var(--color-highlight);
+  color: ${(props) => props.theme.colors.highlight};
   font-weight: bold;
-  font-size: var(--font-size-large);
+  font-size: ${(props) => props.theme.fonts.xlarge};
 `;
 
 const animateCircle = keyframes`
@@ -39,7 +39,7 @@ const animateCircle = keyframes`
 const Circle = styled.circle`
   fill: none;
   stroke-width: 5px;
-  stroke: var(--color-highlight);
+  stroke: ${(props) => props.theme.colors.highlight};
   stroke-dasharray: 628;
   animation: ${animateCircle} 3s ease-in-out;
 `;

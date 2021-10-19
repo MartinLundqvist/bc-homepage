@@ -12,9 +12,9 @@ const Wrapper = styled.div`
 
 const Highlight = styled.div`
   position: relative;
-  height: var(--work-nav-height);
+  height: ${(props) => props.theme.dimensions.navButtonHeight};
   width: 3px;
-  background-color: var(--color-highlight);
+  background-color: ${(props) => props.theme.colors.highlight};
   transition: all 0.25s ease-in-out;
 `;
 

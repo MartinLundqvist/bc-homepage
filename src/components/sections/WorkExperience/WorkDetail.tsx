@@ -24,7 +24,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   margin-top: 10px;
   margin-bottom: 10px;
-  color: var(--color-primary-darker);
+  color: ${(props) => props.theme.colors.darker};
   font-size: clamp(16px, 18px, 20px);
   letter-spacing: 0.1rem;
 
@@ -32,7 +32,7 @@ const ListItem = styled.li`
     position: absolute;
     transform: translateX(-40px);
     content: '>';
-    color: var(--color-highlight);
+    color: ${(props) => props.theme.colors.highlight};
   }
 `;
 

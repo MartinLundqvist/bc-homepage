@@ -29,7 +29,7 @@ const ProjectImage = styled.div`
     @media (max-width: 1000px) {
       width: 100%;
       height: 100%;
-      background-color: var(--color-background-lighter);
+      background-color: ${(props) => props.theme.colors.bgLighter};
       box-shadow: 5px 5px 10px black;
 
       grid-column: 1 / 13;
@@ -40,7 +40,7 @@ const ProjectImage = styled.div`
   @media (max-width: 1000px) {
     width: 100%;
     height: 100%;
-    background-color: var(--color-background-lighter);
+    background-color: ${(props) => props.theme.colors.bgLighter};
     box-shadow: 5px 5px 10px black;
 
     grid-column: 1 / 13;
@@ -79,7 +79,7 @@ const PStyled = styled(P)`
   box-sizing: border-box;
   padding: 25px 20px 25px 20px;
   margin: 0;
-  background-color: var(--color-background-lighter);
+  background-color: ${(props) => props.theme.colors.bgLighter};
   box-shadow: 5px 5px 10px black;
   transition: box-shadow 0.2s ease-in-out;
 
@@ -130,7 +130,7 @@ const ProjectToolsList = styled.ul`
 `;
 
 const ProjectToolsListItem = styled.li`
-  color: var(--color-primary);
+  color: ${(props) => props.theme.colors.primary};
 `;
 
 const ProjectLinkList = styled(ProjectToolsList)``;
@@ -141,11 +141,11 @@ const ProjectLinkListItem = styled(ProjectToolsListItem)`
   height: 20px;
 
   a {
-    color: var(--color-primary);
+    color: ${(props) => props.theme.colors.primary};
     transition: color 0.2s ease-in-out;
 
     &:hover {
-      color: var(--color-highlight);
+      color: ${(props) => props.theme.colors.highlight};
     }
   }
 `;

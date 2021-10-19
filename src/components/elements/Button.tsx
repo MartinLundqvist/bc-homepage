@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledButton = styled.button`
   padding: 1rem;
-  color: var(--color-highlight);
+  color: ${(props) => props.theme.colors.highlight};
   background-color: inherit;
   border: 2px solid;
   border-radius: 5px;
@@ -11,7 +11,7 @@ const StyledButton = styled.button`
   font-size: inherit;
 
   &:hover {
-    background-color: var(--color-background-highlight);
+    background-color: ${(props) => props.theme.colors.bgHighlight};
     cursor: pointer;
     transition: background-color 0.25s ease-in;
   }

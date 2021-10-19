@@ -9,10 +9,10 @@ const Wrapper = styled.div`
   top: 0px;
   right: 0px;
   display: grid;
-  grid-template-rows: var(--nav-height) auto;
+  grid-template-rows: ${(props) => props.theme.dimensions.header} auto;
   width: 400px;
   height: 100vh;
-  background-color: var(--color-hamburger-background);
+  background-color: ${(props) => props.theme.colors.bgLighter};
   transform: translateX(100%);
   transition: transform 0.25s ease-in-out, visibility 0.25s;
   visibility: hidden;
@@ -28,7 +28,7 @@ const MenuWrapper = styled.div`
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  background-color: var(--color-hamburger-background);
+  background-color: ${(props) => props.theme.colors.bgLighter};
 `;
 
 interface IHamburgerMenuProps {

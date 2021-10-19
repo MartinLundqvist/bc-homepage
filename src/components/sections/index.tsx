@@ -13,12 +13,12 @@ const Wrapper = styled.div`
   bottom: 0px;
   min-height: 100vh;
   z-index: 0;
-  padding-right: var(--side-padding);
-  padding-left: var(--side-padding);
+  padding-right: ${(props) => props.theme.dimensions.sidePadding};
+  padding-left: ${(props) => props.theme.dimensions.sidePadding};
 
   @media (max-width: 1000px) {
-    padding-right: var(--side-padding-narrow);
-    padding-left: var(--side-padding-narrow);
+    padding-right: ${(props) => props.theme.dimensions.sidePaddingNarrow};
+    padding-left: ${(props) => props.theme.dimensions.sidePaddingNarrow};
   }
 `;
 

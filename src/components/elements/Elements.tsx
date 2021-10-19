@@ -14,39 +14,39 @@ export const Section = styled.section`
 
 export const H1 = styled.h1`
   margin: 0px;
-  font-size: clamp(40px, 8vw, 80px);
-  color: var(--color-primary);
+  font-size: ${(props) => props.theme.fonts.xxlarge};
+  color: ${(props) => props.theme.colors.primary};
 
   &.darker {
-    color: var(--color-primary-darker);
+    color: ${(props) => props.theme.colors.darker};
   }
 `;
 
 export const H2 = styled.h2`
-  font-size: var(--font-size-large);
+  font-size: ${(props) => props.theme.fonts.xlarge};
   font-weight: bold;
-  color: var(--color-primary);
+  color: ${(props) => props.theme.colors.primary};
 `;
 
 export const H3 = styled.h3`
   font-style: inherit;
   font-weight: inherit;
-  font-size: var(--font-size-regular);
-  color: var(--color-highlight);
+  font-size: ${(props) => props.theme.fonts.regular};
+  color: ${(props) => props.theme.colors.highlight};
 `;
 
 export const H4 = styled.h4`
-  font-size: var(--font-size-regular-plus);
+  font-size: ${(props) => props.theme.fonts.large};
   font-weight: bold;
-  color: var(--color-primary);
+  color: ${(props) => props.theme.colors.primary};
   padding-right: 1rem;
   margin: 0px;
 `;
 
 export const H5 = styled.h5`
   font-weight: normal;
-  font-size: var(--font-size-regular);
-  color: var(--color-primary-darker);
+  font-size: ${(props) => props.theme.fonts.regular};
+  color: ${(props) => props.theme.colors.darker};
   line-height: 1.5;
   letter-spacing: 0.1rem;
   margin: 0px;
@@ -57,9 +57,8 @@ export const P = styled.p`
   margin-top: 30px;
   margin-bottom: 30px;
   font-style: normal;
-  font-size: clamp(16px, 18px, 20px);
-  /* font-size: var(--font-size-regular); */
-  color: var(--color-primary-darker);
+  font-size: ${(props) => props.theme.fonts.regular};
+  color: ${(props) => props.theme.colors.darker};
   line-height: 1.3;
   letter-spacing: 0.05rem;
 
@@ -71,7 +70,7 @@ export const P = styled.p`
   a {
     display: inline-block;
     text-decoration: none;
-    color: var(--color-highlight);
+    color: ${(props) => props.theme.colors.highlight};
 
     &::after {
       content: '';
@@ -82,7 +81,7 @@ export const P = styled.p`
       width: 0px;
       height: 1px;
       opacity: 0.5;
-      background-color: var(--color-highlight);
+      background-color: ${(props) => props.theme.colors.highlight};
       transition: width 0.2s ease-in-out;
     }
 

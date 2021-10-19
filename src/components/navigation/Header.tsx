@@ -15,10 +15,10 @@ const Wrapper = styled.div`
   top: 0px;
   left: 0px;
   width: calc(100% - 100px);
-  height: var(--nav-height);
+  height: ${(props) => props.theme.dimensions.header};
   padding: 0px 50px 0px 50px;
   z-index: 100;
-  background-color: var(--color-background-85);
+  background-color: ${(props) => props.theme.colors.bgTransparent};
   backdrop-filter: blur(10px);
   transition: transform 0.2s ease-in-out;
 

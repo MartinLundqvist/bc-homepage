@@ -6,10 +6,14 @@ import works from '../../../assets/workDB';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  height: var(--work-nav-height);
-  width: calc(100% + var(--side-padding-narrow) * 2);
-  margin-right: calc(var(--side-padding-narrow) * -1);
-  margin-left: calc(var(--side-padding-narrow) * -1);
+  height: ${(props) => props.theme.dimensions.navButtonHeight};
+  width: ${(props) =>
+    `calc(100% + ${props.theme.dimensions.sidePaddingNarrow} * 2)`};
+  margin-right: ${(props) =>
+    `calc(${props.theme.dimensions.sidePaddingNarrow} * -1)`};
+
+  margin-left: ${(props) =>
+    `calc(${props.theme.dimensions.sidePaddingNarrow} * -1)`};
   overflow-x: auto;
   z-index: +10;
 `;
@@ -18,8 +22,8 @@ const Highlight = styled.div`
   position: relative;
   top: calc(100% - 3px);
   height: 3px;
-  min-width: var(--work-nav-width);
-  background-color: var(--color-highlight);
+  min-width: ${(props) => props.theme.dimensions.navButtonWidth};
+  background-color: ${(props) => props.theme.colors.highlight};
   transition: all 0.25s ease-in-out;
 `;
 

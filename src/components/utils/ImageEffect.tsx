@@ -25,7 +25,7 @@ const ImageWrapper = styled.div`
     width: 100%;
     top: 0px;
     left: 0px;
-    background: var(--color-highlight);
+    background: ${(props) => props.theme.colors.highlight};
   }
 
   &:hover {
