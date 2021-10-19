@@ -12,7 +12,6 @@ const Wrapper = styled.div`
   margin-top: 30px;
   width: 100%;
   height: auto;
-  overflow-x: hidden;
   flex-direction: row;
 
   @media (max-width: 1000px) {

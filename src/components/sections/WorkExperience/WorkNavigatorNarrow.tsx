@@ -7,7 +7,9 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   height: var(--work-nav-height);
-  width: 100%;
+  width: calc(100% + var(--side-padding-narrow) * 2);
+  margin-right: calc(var(--side-padding-narrow) * -1);
+  margin-left: calc(var(--side-padding-narrow) * -1);
   overflow-x: auto;
   z-index: +10;
 `;
