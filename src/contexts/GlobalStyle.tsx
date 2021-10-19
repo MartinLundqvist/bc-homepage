@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
 
     &.menu {
       overflow-y: hidden;
+      position: fixed;  
 
       #content > * {
         filter: blur(10px);
