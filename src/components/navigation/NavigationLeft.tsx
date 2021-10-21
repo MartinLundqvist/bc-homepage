@@ -48,7 +48,7 @@ interface ILink {
 const links: ILink[] = [
   {
     text: 'Github',
-    link: '',
+    link: 'https://github.com/MartinLundqvist',
     logo: <GitLogo />,
   },
   {
@@ -63,12 +63,12 @@ const links: ILink[] = [
   },
   {
     text: 'LinkedIn',
-    link: '',
+    link: 'https://www.linkedin.com/in/martin-lundqvist-5bb940',
     logo: <LinkedInLogo />,
   },
   {
     text: 'CodePen',
-    link: '',
+    link: 'https://codepen.io/martinlundqvist',
     logo: <CodePenLogo />,
   },
 ];
@@ -78,7 +78,7 @@ const NavigationLeft = (): JSX.Element => {
     <Wrapper>
       <FadeIn cascade direction='up'>
         {links.map((link, index) => (
-          <Link key={index} href={link.link}>
+          <Link key={index} href={link.link} target='_blank'>
             {link.logo}
           </Link>
         ))}
