@@ -20,10 +20,11 @@ const SectionStart = (): JSX.Element => {
       <H1 className='darker'>Amateur web developer</H1>
       <P>
         I am a hobby / amateur software developer trying to get better at web
-        development. Reproducing awesome hompages built by the best developers
-        out there is a great way to learn! Check out{' '}
-        <a href='https://brittanychiang.com/'> Brittany's site</a> which I stole
-        this design from!
+        development. Reproducing awesome homepages built by the best designers
+        out there is a one of many great ways to learn! Check out{' '}
+        <a href='https://brittanychiang.com/'> Brittany's site</a> where I stole
+        this design from and built this page from the ground up using React and
+        Styled-Components.
       </P>
       <Button text='Click here to learn more' />
     </StyledSection>

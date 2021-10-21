@@ -29,7 +29,7 @@ const projects: IProject[] = [
     projectSubTitle: 'My current homepage',
     projectDescription:
       "What better way to learn more advanced front-end concepts, than to try and rebuild awesome existing pages from the ground up? I found Brittany's page on a top-10 list of beautiful homepages. ",
-    projectTools: ['Node', 'React', 'ViteJs', 'Styled-Components', 'Netify'],
+    projectTools: ['Node', 'React', 'ViteJs', 'Styled-Components', 'Netlify'],
     projectLinks: [
       {
         url: 'https://github.com/MartinLundqvist/bc-homepage',

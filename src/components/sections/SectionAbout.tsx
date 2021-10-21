@@ -23,16 +23,30 @@ const SectionAbout = (): JSX.Element => {
       <SectionTitle index='01.' title='About me' />
       <Wrapper>
         <P className='wide'>
-          Hello my name is Martin Lundqvist and I have nothing very clever to
-          say here. In fact, since this is merely a learning exercise for me, I
-          don't really need to do anything else than add a bunch of nonsensical
-          text. :)
-          <br />I should also insert some <a href=''>random links</a> since
-          that's kind of <a href=''>cool</a> looking.
+          Hello my name is Martin Lundqvist and I'm a tech geek by birth,
+          musician in my heart and management advisor by training. My day job is
+          CEO of{' '}
+          <a href='https:/www.arundo.com' target='_blank'>
+            Arundo Analytics
+          </a>{' '}
+          and I sometimes invest in other tech teams I believe in (shout out to{' '}
+          <a href='https://buddywise.co/' target='_blank'>
+            BuddyWise
+          </a>{' '}
+          and{' '}
+          <a href='https://www.keto-ai.com/' target='_blank'>
+            Keto.AI
+          </a>{' '}
+          /{' '}
+          <a href='https://www.clyrpool.com/' target='_blank'>
+            Clyr
+          </a>
+          ).
           <br />
-          Just for the <a href=''>heck</a> of it, here's a couple of more space
-          wasting couple of words. Again including the{' '}
-          <a href=''>random link</a>.
+          When I'm not working, spending time with my wife and son or hanging
+          out at our beach house in the Stockholm archipelago, I play piano and
+          code - two long standing passions that I picked up again after a 20
+          year long break.
         </P>
         <MartinImage />
       </Wrapper>

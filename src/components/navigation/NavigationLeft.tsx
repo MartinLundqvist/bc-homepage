@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 45%;
+  height: 35%;
   bottom: 0px;
   left: 0px;
   width: ${(props) => props.theme.dimensions.sidePadding};
@@ -50,16 +50,6 @@ const links: ILink[] = [
     text: 'Github',
     link: 'https://github.com/MartinLundqvist',
     logo: <GitLogo />,
-  },
-  {
-    text: 'Twitter',
-    link: '',
-    logo: <TwitterLogo />,
-  },
-  {
-    text: 'Instagram',
-    link: '',
-    logo: <InstaLogo />,
   },
   {
     text: 'LinkedIn',
