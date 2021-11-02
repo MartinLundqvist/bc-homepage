@@ -3,6 +3,7 @@ import Erikssons from './Erikssons.png';
 import Glosly from './Glosly.png';
 import Twolaymen from './Twolaymen.png';
 import BCHomepage from './BCHompage.png';
+import SpaceTourism from './SpaceTourism.png';
 import GitLogo from '../components/elements/GitLogo';
 import LinkLogo from '../components/elements/LinkLogo';
 
@@ -22,6 +23,25 @@ export interface IProjectLinks {
 }
 
 const projects: IProject[] = [
+  {
+    image: SpaceTourism,
+    projectUrl: 'https://lyndenspacetourism.netlify.app/',
+    projectTitle: 'Project',
+    projectSubTitle: 'Frontendmentor challenge',
+    projectDescription:
+      'I hopped on the Space Tourism front-end challenge at frontendmentor.io. Idea was to practice building a fully responsive home page with nested pages using styled-components and react-router-dom. ',
+    projectTools: ['Node', 'React', 'ViteJs', 'Styled-Components', 'Netlify'],
+    projectLinks: [
+      {
+        url: 'https://github.com/MartinLundqvist/space-tourism',
+        logo: <GitLogo />,
+      },
+      {
+        url: 'https://lyndenspacetourism.netlify.app/',
+        logo: <LinkLogo />,
+      },
+    ],
+  },
   {
     image: BCHomepage,
     projectUrl: 'https://martinlundqvist.se/',
