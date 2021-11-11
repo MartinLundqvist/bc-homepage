@@ -4,10 +4,13 @@ import Glosly from './Glosly.png';
 import Twolaymen from './Twolaymen.png';
 import BCHomepage from './BCHompage.png';
 import SpaceTourism from './SpaceTourism.png';
+import Countries from './Countries.png';
 import GitLogo from '../components/elements/GitLogo';
 import LinkLogo from '../components/elements/LinkLogo';
+import { nanoid } from 'nanoid';
 
 export interface IProject {
+  _id: string;
   image: string;
   projectUrl: string;
   projectTitle: string;
@@ -24,6 +27,27 @@ export interface IProjectLinks {
 
 const projects: IProject[] = [
   {
+    _id: nanoid(),
+    image: Countries,
+    projectUrl: 'https://lyndencountries.netlify.app/',
+    projectTitle: 'Project',
+    projectSubTitle: 'Frontendmentor challenge',
+    projectDescription:
+      'I hopped on the Countries Rest API front-end challenge at frontendmentor.io. Goal was to practice building a fast performing SPA that loads data from a public API',
+    projectTools: ['Node', 'React', 'ViteJs', 'Styled-Components', 'Netlify'],
+    projectLinks: [
+      {
+        url: 'https://github.com/MartinLundqvist/countries-challenge',
+        logo: <GitLogo />,
+      },
+      {
+        url: 'https://lyndencountries.netlify.app/',
+        logo: <LinkLogo />,
+      },
+    ],
+  },
+  {
+    _id: nanoid(),
     image: SpaceTourism,
     projectUrl: 'https://lyndenspacetourism.netlify.app/',
     projectTitle: 'Project',
@@ -43,6 +67,7 @@ const projects: IProject[] = [
     ],
   },
   {
+    _id: nanoid(),
     image: BCHomepage,
     projectUrl: 'https://martinlundqvist.se/',
     projectTitle: 'Project',
@@ -62,6 +87,7 @@ const projects: IProject[] = [
     ],
   },
   {
+    _id: nanoid(),
     image: Twolaymen,
     projectUrl: 'http://www.twolaymenhugeissues.com/',
     projectTitle: 'Podcast',
@@ -81,6 +107,7 @@ const projects: IProject[] = [
     ],
   },
   {
+    _id: nanoid(),
     image: Erikssons,
     projectUrl: 'https://erikssons.herokupapp.com',
     projectTitle: 'Project',
@@ -100,6 +127,7 @@ const projects: IProject[] = [
     ],
   },
   {
+    _id: nanoid(),
     image: Glosly,
     projectUrl: 'https://glosly.eu',
     projectTitle: 'Project',

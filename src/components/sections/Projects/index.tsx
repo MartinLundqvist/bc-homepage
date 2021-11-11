@@ -154,7 +154,7 @@ const Projects = (): JSX.Element => {
   return (
     <ProjectList>
       {projects.map((project, index) => (
-        <ProjectListItem key={project.projectSubTitle}>
+        <ProjectListItem key={project._id}>
           <ProjectImage className={index % 2 != 0 ? 'flip' : ''}>
             <a href={project.projectUrl} target='_blank'>
               <ImageEffect>
