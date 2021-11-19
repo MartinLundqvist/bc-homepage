@@ -2,11 +2,14 @@
   "name": "bc-homepage",
   "version": "0.0.0",
   "scripts": {
+    "netlify": "netlify dev",
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
+    "googleapis": "^91.0.0",
     "nanoid": "^3.1.30",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
@@ -14,11 +17,14 @@
     "styled-components": "^5.3.1"
   },
   "devDependencies": {
+    "@netlify/functions": "^0.9.0",
+    "@types/node": "^16.11.9",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-responsive": "^8.0.4",
     "@types/styled-components": "^5.1.15",
     "@vitejs/plugin-react": "^1.0.0",
+    "netlify-cli": "^7.0.2",
     "typescript": "^4.3.2",
     "vite": "^2.6.0"
   }

@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { H2 as H2T, H3 as H3T, P } from '../../elements/Elements';
 import ImageEffect from '../../utils/ImageEffect';
 import { useData } from '../../../contexts/DataContextProvider';
+import LinkLogo from '../../elements/LinkLogo';
+import GitLogo from '../../elements/GitLogo';
 
 const ProjectList = styled.ul`
   display: block;
@@ -153,6 +155,14 @@ const ProjectLinkListItem = styled(ProjectToolsListItem)`
 const Projects = (): JSX.Element => {
   const { isLoading, isError, dataAPI } = useData();
 
+  useEffect(() => {
+    console.log(dataAPI?.getProjects());
+
+    const projectone = dataAPI?.getProjects()[3];
+
+    console.log(projectone);
+  }, [dataAPI]);
+
   return (
     <ProjectList>
       {dataAPI &&
@@ -161,7 +171,7 @@ const Projects = (): JSX.Element => {
             <ProjectImage className={index % 2 != 0 ? 'flip' : ''}>
               <a href={project.projectUrl} target='_blank'>
                 <ImageEffect>
-                  <img src={project.image} />
+                  <img src={project.imageUrl} />
                 </ImageEffect>
               </a>
             </ProjectImage>
@@ -175,13 +185,16 @@ const Projects = (): JSX.Element => {
                 ))}
               </ProjectToolsList>
               <ProjectLinkList className={index % 2 != 0 ? 'flip' : ''}>
-                {project.projectLinks.map((link) => (
-                  <ProjectLinkListItem key={link.url}>
-                    <a href={link.url} target='_blank'>
-                      {link.logo}
-                    </a>
-                  </ProjectLinkListItem>
-                ))}
+                <ProjectLinkListItem>
+                  <a href={project.projectUrl} target='_blank'>
+                    <LinkLogo />
+                  </a>
+                </ProjectLinkListItem>
+                <ProjectLinkListItem>
+                  <a href={project.projectGitUrl} target='_blank'>
+                    <GitLogo />
+                  </a>
+                </ProjectLinkListItem>
               </ProjectLinkList>
             </ProjectDetails>
           </ProjectListItem>
