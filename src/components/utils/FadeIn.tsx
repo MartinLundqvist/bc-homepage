@@ -109,7 +109,7 @@ const FadeIn = ({
           if (entry.isIntersecting && !isVisible) setIsVisible(true);
         });
       },
-      { threshold: [0.25, 0.5, 0.75] }
+      { threshold: [0.1, 0.5, 0.9] }
     );
     domRef.current && observer.observe(domRef.current);
 

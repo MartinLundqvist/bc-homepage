@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { H4, H5 } from '../../elements/Elements';
-import works, { IWork } from '../../../assets/workDB';
+import { IWork } from '../../../types';
+import { useData } from '../../../contexts/DataContextProvider';
 
 const Wrapper = styled.div`
   display: flex;
@@ -41,10 +42,11 @@ interface IWorkDetailProps {
 }
 
 const WorkDetail = ({ workId }: IWorkDetailProps): JSX.Element => {
+  const { dataAPI, isError, isLoading } = useData();
   const [work, setWork] = useState<IWork>();
 
   useEffect(() => {
-    setWork(works.find((work) => work.id == workId));
+    dataAPI && setWork(dataAPI.getWorks()?.find((work) => work.id == workId));
   }, [workId]);
 
   return (

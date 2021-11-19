@@ -8,22 +8,23 @@ import Countries from './Countries.png';
 import GitLogo from '../components/elements/GitLogo';
 import LinkLogo from '../components/elements/LinkLogo';
 import { nanoid } from 'nanoid';
+import { IProject } from '../types';
 
-export interface IProject {
-  _id: string;
-  image: string;
-  projectUrl: string;
-  projectTitle: string;
-  projectSubTitle: string;
-  projectDescription: string;
-  projectTools: string[];
-  projectLinks: IProjectLinks[];
-}
+// export interface IProject {
+//   _id: string;
+//   image: string;
+//   projectUrl: string;
+//   projectTitle: string;
+//   projectSubTitle: string;
+//   projectDescription: string;
+//   projectTools: string[];
+//   projectLinks: IProjectLinks[];
+// }
 
-export interface IProjectLinks {
-  url: string;
-  logo: JSX.Element;
-}
+// export interface IProjectLinks {
+//   url: string;
+//   logo: JSX.Element;
+// }
 
 const projects: IProject[] = [
   {

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Button from './Button';
-import works from '../../../assets/workDB';
+import { useData } from '../../../contexts/DataContextProvider';
+//import works from '../../../assets/workDB';
 
 const Wrapper = styled.div`
   display: flex;
@@ -37,15 +38,18 @@ const WorkNavigatorNarrow = ({
   setWorkId,
 }: IWorkNavigatorNarrowProps): JSX.Element => {
   const [rightPosition, setRightPosition] = useState(0);
+  const { dataAPI } = useData();
 
   useEffect(() => {
-    const position = 120 * (works.length - workId);
-    setRightPosition(position);
+    if (dataAPI) {
+      const position = 120 * (dataAPI.getWorks()!.length - workId);
+      setRightPosition(position);
+    }
   }, [workId]);
 
   return (
     <Wrapper>
-      {works.map((work) => (
+      {dataAPI?.getWorks()?.map((work) => (
         <Button
           className={workId == work.id ? 'highlight' : ''}
           key={work.id}

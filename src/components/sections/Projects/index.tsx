@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { H2 as H2T, H3 as H3T, P } from '../../elements/Elements';
 import ImageEffect from '../../utils/ImageEffect';
-import projects from '../../../assets/projectsDB';
+import { useData } from '../../../contexts/DataContextProvider';
 
 const ProjectList = styled.ul`
   display: block;
@@ -151,38 +151,41 @@ const ProjectLinkListItem = styled(ProjectToolsListItem)`
 `;
 
 const Projects = (): JSX.Element => {
+  const { isLoading, isError, dataAPI } = useData();
+
   return (
     <ProjectList>
-      {projects.map((project, index) => (
-        <ProjectListItem key={project._id}>
-          <ProjectImage className={index % 2 != 0 ? 'flip' : ''}>
-            <a href={project.projectUrl} target='_blank'>
-              <ImageEffect>
-                <img src={project.image} />
-              </ImageEffect>
-            </a>
-          </ProjectImage>
-          <ProjectDetails className={index % 2 != 0 ? 'flip' : ''}>
-            <H3>{project.projectTitle}</H3>
-            <H2>{project.projectSubTitle}</H2>
-            <PStyled>{project.projectDescription}</PStyled>
-            <ProjectToolsList className={index % 2 != 0 ? 'flip' : ''}>
-              {project.projectTools.map((tool) => (
-                <ProjectToolsListItem key={tool}>{tool}</ProjectToolsListItem>
-              ))}
-            </ProjectToolsList>
-            <ProjectLinkList className={index % 2 != 0 ? 'flip' : ''}>
-              {project.projectLinks.map((link) => (
-                <ProjectLinkListItem key={link.url}>
-                  <a href={link.url} target='_blank'>
-                    {link.logo}
-                  </a>
-                </ProjectLinkListItem>
-              ))}
-            </ProjectLinkList>
-          </ProjectDetails>
-        </ProjectListItem>
-      ))}
+      {dataAPI &&
+        dataAPI.getProjects().map((project, index) => (
+          <ProjectListItem key={project._id}>
+            <ProjectImage className={index % 2 != 0 ? 'flip' : ''}>
+              <a href={project.projectUrl} target='_blank'>
+                <ImageEffect>
+                  <img src={project.image} />
+                </ImageEffect>
+              </a>
+            </ProjectImage>
+            <ProjectDetails className={index % 2 != 0 ? 'flip' : ''}>
+              <H3>{project.projectTitle}</H3>
+              <H2>{project.projectSubTitle}</H2>
+              <PStyled>{project.projectDescription}</PStyled>
+              <ProjectToolsList className={index % 2 != 0 ? 'flip' : ''}>
+                {project.projectTools.map((tool) => (
+                  <ProjectToolsListItem key={tool}>{tool}</ProjectToolsListItem>
+                ))}
+              </ProjectToolsList>
+              <ProjectLinkList className={index % 2 != 0 ? 'flip' : ''}>
+                {project.projectLinks.map((link) => (
+                  <ProjectLinkListItem key={link.url}>
+                    <a href={link.url} target='_blank'>
+                      {link.logo}
+                    </a>
+                  </ProjectLinkListItem>
+                ))}
+              </ProjectLinkList>
+            </ProjectDetails>
+          </ProjectListItem>
+        ))}
     </ProjectList>
   );
 };
