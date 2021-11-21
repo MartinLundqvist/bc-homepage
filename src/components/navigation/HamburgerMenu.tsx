@@ -38,7 +38,8 @@ interface IHamburgerMenuProps {
 
 const HamburgerMenu = ({ open, setOpen }: IHamburgerMenuProps): JSX.Element => {
   const buttonClickHandler = () => {
-    console.log('Button clicked');
+    //TODO: Fix a resume download (or link to LinkedIn or smth.)
+    console.log('Not implemented yet :)');
   };
 
   return (

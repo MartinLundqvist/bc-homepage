@@ -40,7 +40,7 @@ export const parseWorks = (data: any[]): IWork[] => {
           descriptions: stringToArray(line[5]),
         });
       } else {
-        console.log('Problemas parsing Works at line nr ' + index.toString());
+        console.log('Problems parsing Works at line nr ' + index.toString());
       }
     });
     return results;
@@ -71,9 +71,7 @@ export const parseProjects = (data: any[]): IProject[] => {
           imageUrl: line[6],
         });
       } else {
-        console.log(
-          'Problemas parsing Projects at line nr ' + index.toString()
-        );
+        console.log('Problems parsing Projects at line nr ' + index.toString());
       }
     });
     // console.log(results);

@@ -10,11 +10,8 @@ class DataAPI {
   private works: IWork[];
 
   constructor(projects: IProject[], works: IWork[]) {
-    console.log('Constructing dataAPI with projects:');
-    console.log(projects);
     this.projects = projects;
     this.works = works;
-    console.log(this);
   }
 
   public getProjects = () => this.projects;
@@ -48,7 +45,7 @@ const DataContextProvider = ({ children }: IDataContextProps): JSX.Element => {
         return [];
       }
     } catch (error) {
-      console.log('Problemas while fetching projects');
+      console.log('Problems while fetching projects');
       return [];
     }
   };
@@ -63,7 +60,7 @@ const DataContextProvider = ({ children }: IDataContextProps): JSX.Element => {
         return [];
       }
     } catch (error) {
-      console.log('Problemas while fetching works');
+      console.log('Problems while fetching works');
       return [];
     }
   };

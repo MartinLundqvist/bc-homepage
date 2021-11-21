@@ -155,14 +155,6 @@ const ProjectLinkListItem = styled(ProjectToolsListItem)`
 const Projects = (): JSX.Element => {
   const { isLoading, isError, dataAPI } = useData();
 
-  useEffect(() => {
-    console.log(dataAPI?.getProjects());
-
-    const projectone = dataAPI?.getProjects()[3];
-
-    console.log(projectone);
-  }, [dataAPI]);
-
   return (
     <ProjectList>
       {dataAPI &&
