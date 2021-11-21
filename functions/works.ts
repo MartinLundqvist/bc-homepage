@@ -2,21 +2,29 @@ import { Handler } from '@netlify/functions';
 import { parseWorks } from '../src/utils/utils';
 import { getData } from '../src/utils/data';
 
-// set up controllers
-
 const handler: Handler = async () => {
   try {
     const results = await getData('Works!A2:G10');
     if (results) {
-      return {
-        statusCode: 200,
-        body: JSON.stringify(parseWorks(results)),
-      };
+      try {
+        return {
+          statusCode: 200,
+          body: JSON.stringify(parseWorks(results)),
+        };
+      } catch (error) {
+        return {
+          statusCode: 500,
+          body: JSON.stringify({
+            message: 'Error parsing Works data - parseWorks threw an exception',
+            error: error.message,
+          }),
+        };
+      }
     } else {
       return {
         statusCode: 500,
         body: JSON.stringify({
-          message: 'Something went wrong...',
+          message: 'Error getting Works data - response was empty',
         }),
       };
     }
@@ -24,8 +32,8 @@ const handler: Handler = async () => {
     return {
       statusCode: 500,
       body: JSON.stringify({
-        message: 'Something went wrong...',
-        error: error,
+        message: 'Error getting Works data - getData threw an exception',
+        error: error.message,
       }),
     };
   }

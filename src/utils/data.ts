@@ -30,9 +30,13 @@ const getData = async (range: string) => {
 
     return response.data.values;
   } catch (error) {
-    console.log('Error occured while fetching data');
+    console.log(
+      'Error while setting up credentials or fetching data from Google Spreadsheet'
+    );
     console.log(error);
-    throw error;
+    throw new Error(
+      'Error while setting up credentials or fetching data from Google Spreadsheet'
+    );
   }
 
   return null;
