@@ -47,11 +47,6 @@ const WorkNavigatorNarrow = ({
     }
   }, [workId, dataAPI]);
 
-  // Debugging - remove
-  useEffect(() => {
-    console.log(rightPosition);
-  }, [rightPosition]);
-
   // TODO: Reimplement the Highlight component to an '::after' pseudo-element of the Wrapper component.
 
   return (
