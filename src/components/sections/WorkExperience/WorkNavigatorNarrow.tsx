@@ -45,11 +45,18 @@ const WorkNavigatorNarrow = ({
       const position = 120 * (dataAPI.getWorks()!.length - workId);
       setRightPosition(position);
     }
-  }, [workId]);
+  }, [workId, dataAPI]);
+
+  // Debugging - remove
+  useEffect(() => {
+    console.log(rightPosition);
+  }, [rightPosition]);
+
+  // TODO: Reimplement the Highlight component to an '::after' pseudo-element of the Wrapper component.
 
   return (
     <Wrapper>
-      {dataAPI?.getWorks()?.map((work) => (
+      {dataAPI?.getWorks()?.map((work, index) => (
         <Button
           className={workId == work.id ? 'highlight' : ''}
           key={work.id}
