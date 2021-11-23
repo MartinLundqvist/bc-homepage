@@ -4,7 +4,11 @@ import Button from './Button';
 import { useData } from '../../../contexts/DataContextProvider';
 //import works from '../../../assets/workDB';
 
-const Wrapper = styled.div`
+interface WrapperProps {
+  rightPos: number;
+}
+
+const Wrapper = styled.div<WrapperProps>`
   display: flex;
   flex-direction: row;
   height: ${(props) => props.theme.dimensions.navButtonHeight};
@@ -17,15 +21,17 @@ const Wrapper = styled.div`
     `calc(${props.theme.dimensions.sidePaddingNarrow} * -1)`};
   overflow-x: auto;
   z-index: +10;
-`;
 
-const Highlight = styled.div`
-  position: relative;
-  top: calc(100% - 3px);
-  height: 3px;
-  min-width: ${(props) => props.theme.dimensions.navButtonWidth};
-  background-color: ${(props) => props.theme.colors.highlight};
-  transition: all 0.25s ease-in-out;
+  &::after {
+    content: '';
+    position: relative;
+    top: calc(100% - 3px);
+    right: ${(props) => props.rightPos}px;
+    height: 3px;
+    min-width: ${(props) => props.theme.dimensions.navButtonWidth};
+    background-color: ${(props) => props.theme.colors.highlight};
+    transition: all 0.25s ease-in-out;
+  }
 `;
 
 interface IWorkNavigatorNarrowProps {
@@ -47,10 +53,8 @@ const WorkNavigatorNarrow = ({
     }
   }, [workId, dataAPI]);
 
-  // TODO: Reimplement the Highlight component to an '::after' pseudo-element of the Wrapper component.
-
   return (
-    <Wrapper>
+    <Wrapper rightPos={rightPosition}>
       {dataAPI?.getWorks()?.map((work, index) => (
         <Button
           className={workId == work.id ? 'highlight' : ''}
@@ -60,7 +64,6 @@ const WorkNavigatorNarrow = ({
           {work.work}
         </Button>
       ))}
-      <Highlight style={{ right: `${rightPosition}px` }}></Highlight>
     </Wrapper>
   );
 };

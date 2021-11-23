@@ -4,19 +4,25 @@ import Button from './Button';
 import { useData } from '../../../contexts/DataContextProvider';
 //import works from '../../../assets/workDB';
 
-const Wrapper = styled.div`
+interface WrapperProps {
+  bottomPos: number;
+}
+
+const Wrapper = styled.div<WrapperProps>`
   display: flex;
   flex-direction: column;
   width: 10rem;
   height: auto;
-`;
 
-const Highlight = styled.div`
-  position: relative;
-  height: ${(props) => props.theme.dimensions.navButtonHeight};
-  width: 3px;
-  background-color: ${(props) => props.theme.colors.highlight};
-  transition: all 0.25s ease-in-out;
+  &::after {
+    content: '';
+    position: relative;
+    height: ${(props) => props.theme.dimensions.navButtonHeight};
+    width: 3px;
+    background-color: ${(props) => props.theme.colors.highlight};
+    transition: all 0.25s ease-in-out;
+    bottom: ${(props) => props.bottomPos}px;
+  }
 `;
 
 interface IWorkNavigatorProps {
@@ -36,10 +42,10 @@ const WorkNavigator = ({
       const position = 48 * (dataAPI.getWorks()!.length - workId); // Dangerous
       setBottomPosition(position);
     }
-  }, [workId]);
+  }, [workId, dataAPI]);
 
   return (
-    <Wrapper>
+    <Wrapper bottomPos={bottomPosition}>
       {dataAPI?.getWorks()?.map((work) => (
         <Button
           className={workId == work.id ? 'highlight' : ''}
@@ -49,7 +55,6 @@ const WorkNavigator = ({
           {work.work}
         </Button>
       ))}
-      <Highlight style={{ bottom: `${bottomPosition}px` }}></Highlight>
     </Wrapper>
   );
 };
