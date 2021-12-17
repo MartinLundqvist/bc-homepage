@@ -47,7 +47,7 @@ const WorkDetail = ({ workId }: IWorkDetailProps): JSX.Element => {
 
   useEffect(() => {
     dataAPI && setWork(dataAPI.getWorks()?.find((work) => work.id == workId));
-  }, [workId]);
+  }, [workId, dataAPI]);
 
   return (
     <Wrapper>
