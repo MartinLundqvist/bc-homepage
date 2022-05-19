@@ -4,7 +4,7 @@ import { getData } from '../src/utils/data';
 
 const handler: Handler = async () => {
   try {
-    const results = await getData('Projects!A2:G10');
+    const results = await getData('Projects!A2:G15');
     if (results) {
       try {
         return {
